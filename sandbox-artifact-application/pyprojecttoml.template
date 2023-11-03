@@ -27,12 +27,15 @@ packages = [{include = "@package@"}]
 
 [tool.poetry.dependencies]
 python = "^@pythonMajorMinorVersion@"
-rydnr-sandbox-artifact = "^@rydnrSandboxArtifact@"
+pythoneda-shared-artifact-application = "^@pythonedaSharedArtifactApplication@"
 pythoneda-shared-artifact-shared = "^@pythonedaSharedArtifactShared@"
 pythoneda-shared-artifact-infrastructure = "^@pythonedaSharedArtifactInfrastructure@"
 pythoneda-shared-pythoneda-application = "^@pythonedaSharedPythonedaApplication@"
 pythoneda-shared-pythoneda-banner = "^@pythonedaSharedPythonedaBanner@"
 pythoneda-shared-pythoneda-domain = "^@pythonedaSharedPythonedaDomain@"
+pythoneda-shared-pythoneda-infrastructure = "^@pythonedaSharedPythonedaInfrastructure@"
+rydnr-sandbox-artifact = "^@rydnrSandboxArtifact@"
+rydnr-sandbox-artifact-infrastructure = "^@rydnrSandboxArtifactInfrastructure@"
 
 [build-system]
 requires = ["poetry-core"]

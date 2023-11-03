@@ -21,6 +21,20 @@
   inputs = rec {
     flake-utils.url = "github:numtide/flake-utils/v1.0.0";
     nixos.url = "github:NixOS/nixpkgs/nixos-23.05";
+    pythoneda-shared-artifact-application = {
+      inputs.flake-utils.follows = "flake-utils";
+      inputs.nixos.follows = "nixos";
+      inputs.pythoneda-shared-artifact-shared.follows =
+        "pythoneda-shared-artifact-shared";
+      inputs.pythoneda-shared-pythoneda-application.follows =
+        "pythoneda-shared-pythoneda-application";
+      inputs.pythoneda-shared-pythoneda-banner.follows =
+        "pythoneda-shared-pythoneda-banner";
+      inputs.pythoneda-shared-pythoneda-domain.follows =
+        "pythoneda-shared-pythoneda-domain";
+      url =
+        "github:pythoneda-shared-artifact/application-artifact/0.0.1?dir=application";
+    };
     pythoneda-shared-artifact-infrastructure = {
       inputs.flake-utils.follows = "flake-utils";
       inputs.nixos.follows = "nixos";
@@ -74,6 +88,17 @@
         "pythoneda-shared-pythoneda-domain";
       url = "github:rydnr/sandbox-artifact-artifact/0.0.1?dir=sandbox-artifact";
     };
+    rydnr-sandbox-artifact-infrastructure = {
+      inputs.flake-utils.follows = "flake-utils";
+      inputs.nixos.follows = "nixos";
+      inputs.pythoneda-shared-pythoneda-banner.follows =
+        "pythoneda-shared-pythoneda-banner";
+      inputs.pythoneda-shared-pythoneda-domain.follows =
+        "pythoneda-shared-pythoneda-domain";
+      inputs.rydnr-sandbox-artifact.follows = "rydnr-sandbox-artifact";
+      url =
+        "github:rydnr/sandbox-artifact-infrastructure-artifact/0.0.1?dir=sandbox-artifact-infrastructure";
+    };
     pythoneda-shared-pythoneda-infrastructure = {
       inputs.flake-utils.follows = "flake-utils";
       inputs.nixos.follows = "nixos";
@@ -111,11 +136,13 @@
         shared = import "${pythoneda-shared-pythoneda-banner}/nix/shared.nix";
         pkgs = import nixos { inherit system; };
         rydnr-sandbox-artifact-application-for = { python
-          , rydnr-sandbox-artifact, pythoneda-shared-artifact-infrastructure
+          , pythoneda-shared-artifact-application
+          , pythoneda-shared-artifact-infrastructure
           , pythoneda-shared-artifact-shared
           , pythoneda-shared-pythoneda-application
           , pythoneda-shared-pythoneda-banner, pythoneda-shared-pythoneda-domain
-          }:
+          , pythoneda-shared-pythoneda-infrastructure, rydnr-sandbox-artifact
+          , rydnr-sandbox-artifact-infrastructure }:
           let
             pnameWithUnderscores =
               builtins.replaceStrings [ "-" ] [ "_" ] pname;
@@ -137,6 +164,8 @@
               desc = description;
               inherit homepage package pname pythonMajorMinorVersion
                 pythonpackage version;
+              pythonedaSharedArtifactApplication =
+                pythoneda-shared-artifact-application.version;
               pythonedaSharedArtifactInfrastructure =
                 pythoneda-shared-artifact-infrastructure.version;
               pythonedaSharedArtifactShared =
@@ -147,7 +176,11 @@
                 pythoneda-shared-pythoneda-banner.version;
               pythonedaSharedPythonedaDomain =
                 pythoneda-shared-pythoneda-domain.version;
+              pythonedaSharedPythonedaInfrastructure =
+                pythoneda-shared-pythoneda-infrastructure.version;
               rydnrSandboxArtifact = rydnr-sandbox-artifact.version;
+              rydnrSandboxArtifactInfrastructure =
+                rydnr-sandbox-artifact-infrastructure.version;
               src = pyprojectTemplateFile;
             };
             bannerTemplateFile =
@@ -190,12 +223,15 @@
 
             nativeBuildInputs = with python.pkgs; [ pip pkgs.jq poetry-core ];
             propagatedBuildInputs = with python.pkgs; [
-              rydnr-sandbox-artifact
+              pythoneda-shared-artifact-application
               pythoneda-shared-artifact-infrastructure
               pythoneda-shared-artifact-shared
               pythoneda-shared-pythoneda-application
               pythoneda-shared-pythoneda-banner
               pythoneda-shared-pythoneda-domain
+              pythoneda-shared-pythoneda-infrastructure
+              rydnr-sandbox-artifact
+              rydnr-sandbox-artifact-infrastructure
             ];
 
             pythonImportsCheck = [ pythonpackage ];
@@ -328,6 +364,8 @@
           rydnr-sandbox-artifact-application-python38 =
             rydnr-sandbox-artifact-application-for {
               python = pkgs.python38;
+              pythoneda-shared-artifact-application =
+                pythoneda-shared-artifact-application.packages.${system}.pythoneda-shared-artifact-application-python38;
               pythoneda-shared-artifact-infrastructure =
                 pythoneda-shared-artifact-infrastructure.packages.${system}.pythoneda-shared-artifact-infrastructure-python38;
               pythoneda-shared-artifact-shared =
@@ -338,12 +376,18 @@
                 pythoneda-shared-pythoneda-banner.packages.${system}.pythoneda-shared-pythoneda-banner-python38;
               pythoneda-shared-pythoneda-domain =
                 pythoneda-shared-pythoneda-domain.packages.${system}.pythoneda-shared-pythoneda-domain-python38;
+              pythoneda-shared-pythoneda-infrastructure =
+                pythoneda-shared-pythoneda-infrastructure.packages.${system}.pythoneda-shared-pythoneda-infrastructure-python38;
               rydnr-sandbox-artifact =
                 rydnr-sandbox-artifact.packages.${system}.rydnr-sandbox-artifact-python38;
+              rydnr-sandbox-artifact-infrastructure =
+                rydnr-sandbox-artifact-infrastructure.packages.${system}.rydnr-sandbox-artifact-infrastructure-python38;
             };
           rydnr-sandbox-artifact-application-python39 =
             rydnr-sandbox-artifact-application-for {
               python = pkgs.python39;
+              pythoneda-shared-artifact-application =
+                pythoneda-shared-artifact-application.packages.${system}.pythoneda-shared-artifact-application-python39;
               pythoneda-shared-artifact-infrastructure =
                 pythoneda-shared-artifact-infrastructure.packages.${system}.pythoneda-shared-artifact-infrastructure-python39;
               pythoneda-shared-artifact-shared =
@@ -354,12 +398,18 @@
                 pythoneda-shared-pythoneda-banner.packages.${system}.pythoneda-shared-pythoneda-banner-python39;
               pythoneda-shared-pythoneda-domain =
                 pythoneda-shared-pythoneda-domain.packages.${system}.pythoneda-shared-pythoneda-domain-python39;
+              pythoneda-shared-pythoneda-infrastructure =
+                pythoneda-shared-pythoneda-infrastructure.packages.${system}.pythoneda-shared-pythoneda-infrastructure-python39;
               rydnr-sandbox-artifact =
                 rydnr-sandbox-artifact.packages.${system}.rydnr-sandbox-artifact-python39;
+              rydnr-sandbox-artifact-infrastructure =
+                rydnr-sandbox-artifact-infrastructure.packages.${system}.rydnr-sandbox-artifact-infrastructure-python39;
             };
           rydnr-sandbox-artifact-application-python310 =
             rydnr-sandbox-artifact-application-for {
               python = pkgs.python310;
+              pythoneda-shared-artifact-application =
+                pythoneda-shared-artifact-application.packages.${system}.pythoneda-shared-artifact-application-python310;
               pythoneda-shared-artifact-infrastructure =
                 pythoneda-shared-artifact-infrastructure.packages.${system}.pythoneda-shared-artifact-infrastructure-python310;
               pythoneda-shared-artifact-shared =
@@ -370,12 +420,18 @@
                 pythoneda-shared-pythoneda-banner.packages.${system}.pythoneda-shared-pythoneda-banner-python310;
               pythoneda-shared-pythoneda-domain =
                 pythoneda-shared-pythoneda-domain.packages.${system}.pythoneda-shared-pythoneda-domain-python310;
+              pythoneda-shared-pythoneda-infrastructure =
+                pythoneda-shared-pythoneda-infrastructure.packages.${system}.pythoneda-shared-pythoneda-infrastructure-python310;
               rydnr-sandbox-artifact =
                 rydnr-sandbox-artifact.packages.${system}.rydnr-sandbox-artifact-python310;
+              rydnr-sandbox-artifact-infrastructure =
+                rydnr-sandbox-artifact-infrastructure.packages.${system}.rydnr-sandbox-artifact-infrastructure-python310;
             };
           rydnr-sandbox-artifact-application-python311 =
             rydnr-sandbox-artifact-application-for {
               python = pkgs.python311;
+              pythoneda-shared-artifact-application =
+                pythoneda-shared-artifact-application.packages.${system}.pythoneda-shared-artifact-application-python311;
               pythoneda-shared-artifact-infrastructure =
                 pythoneda-shared-artifact-infrastructure.packages.${system}.pythoneda-shared-artifact-infrastructure-python311;
               pythoneda-shared-artifact-shared =
@@ -386,8 +442,12 @@
                 pythoneda-shared-pythoneda-banner.packages.${system}.pythoneda-shared-pythoneda-banner-python311;
               pythoneda-shared-pythoneda-domain =
                 pythoneda-shared-pythoneda-domain.packages.${system}.pythoneda-shared-pythoneda-domain-python311;
+              pythoneda-shared-pythoneda-infrastructure =
+                pythoneda-shared-pythoneda-infrastructure.packages.${system}.pythoneda-shared-pythoneda-infrastructure-python311;
               rydnr-sandbox-artifact =
                 rydnr-sandbox-artifact.packages.${system}.rydnr-sandbox-artifact-python311;
+              rydnr-sandbox-artifact-infrastructure =
+                rydnr-sandbox-artifact-infrastructure.packages.${system}.rydnr-sandbox-artifact-infrastructure-python311;
             };
         };
       });
