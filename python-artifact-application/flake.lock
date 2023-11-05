@@ -3,19 +3,19 @@
     "INDIRECT-INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-git-shared": {
       "inputs": {
         "flake-utils": [
-          "pythoneda-shared-artifact-application",
+          "pythoneda-sandbox-python-artifact-infrastructure",
           "flake-utils"
         ],
         "nixos": [
-          "pythoneda-shared-artifact-application",
+          "pythoneda-sandbox-python-artifact-infrastructure",
           "nixos"
         ],
         "pythoneda-shared-pythoneda-banner": [
-          "pythoneda-shared-artifact-application",
+          "pythoneda-sandbox-python-artifact-infrastructure",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
-          "pythoneda-shared-artifact-application",
+          "pythoneda-sandbox-python-artifact-infrastructure",
           "pythoneda-shared-pythoneda-domain"
         ]
       },
@@ -39,19 +39,19 @@
     "INDIRECT-INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-git-shared_2": {
       "inputs": {
         "flake-utils": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-shared-artifact-application",
           "flake-utils"
         ],
         "nixos": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-shared-artifact-application",
           "nixos"
         ],
         "pythoneda-shared-pythoneda-banner": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-shared-artifact-application",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-shared-artifact-application",
           "pythoneda-shared-pythoneda-domain"
         ]
       },
@@ -75,19 +75,19 @@
     "INDIRECT-INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-git-shared_3": {
       "inputs": {
         "flake-utils": [
-          "rydnr-sandbox-artifact-infrastructure",
+          "pythoneda-shared-artifact-infrastructure",
           "flake-utils"
         ],
         "nixos": [
-          "rydnr-sandbox-artifact-infrastructure",
+          "pythoneda-shared-artifact-infrastructure",
           "nixos"
         ],
         "pythoneda-shared-pythoneda-banner": [
-          "rydnr-sandbox-artifact-infrastructure",
+          "pythoneda-shared-artifact-infrastructure",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
-          "rydnr-sandbox-artifact-infrastructure",
+          "pythoneda-shared-artifact-infrastructure",
           "pythoneda-shared-pythoneda-domain"
         ]
       },
@@ -111,64 +111,23 @@
     "INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared": {
       "inputs": {
         "flake-utils": [
-          "pythoneda-shared-artifact-application",
+          "pythoneda-sandbox-python-artifact-infrastructure",
           "flake-utils"
         ],
         "nixos": [
-          "pythoneda-shared-artifact-application",
+          "pythoneda-sandbox-python-artifact-infrastructure",
           "nixos"
         ],
         "pythoneda-shared-git-shared": [
-          "pythoneda-shared-artifact-application",
+          "pythoneda-sandbox-python-artifact-infrastructure",
           "INDIRECT-INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-git-shared"
         ],
         "pythoneda-shared-pythoneda-banner": [
-          "pythoneda-shared-artifact-application",
+          "pythoneda-sandbox-python-artifact-infrastructure",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
-          "pythoneda-shared-artifact-application",
-          "pythoneda-shared-pythoneda-domain"
-        ],
-        "stringtemplate3": "stringtemplate3"
-      },
-      "locked": {
-        "dir": "shared",
-        "lastModified": 1695896562,
-        "narHash": "sha256-X4rKfVJR4qoTmUpR0dmi3wvdLk4kgGP/N9hogFpr2C8=",
-        "owner": "pythoneda-shared-nix-flake",
-        "repo": "shared-artifact",
-        "rev": "7b8b29b6cf1d5b977a71db16cadf857a7fd68212",
-        "type": "github"
-      },
-      "original": {
-        "dir": "shared",
-        "owner": "pythoneda-shared-nix-flake",
-        "ref": "0.0.2",
-        "repo": "shared-artifact",
-        "type": "github"
-      }
-    },
-    "INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared_2": {
-      "inputs": {
-        "flake-utils": [
-          "pythoneda-shared-artifact-infrastructure",
-          "flake-utils"
-        ],
-        "nixos": [
-          "pythoneda-shared-artifact-infrastructure",
-          "nixos"
-        ],
-        "pythoneda-shared-git-shared": [
-          "pythoneda-shared-artifact-infrastructure",
-          "INDIRECT-INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-git-shared"
-        ],
-        "pythoneda-shared-pythoneda-banner": [
-          "pythoneda-shared-artifact-infrastructure",
-          "pythoneda-shared-pythoneda-banner"
-        ],
-        "pythoneda-shared-pythoneda-domain": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-sandbox-python-artifact-infrastructure",
           "pythoneda-shared-pythoneda-domain"
         ],
         "stringtemplate3": "stringtemplate3_2"
@@ -190,29 +149,70 @@
         "type": "github"
       }
     },
-    "INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared_3": {
+    "INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared_2": {
       "inputs": {
         "flake-utils": [
-          "rydnr-sandbox-artifact-infrastructure",
+          "pythoneda-shared-artifact-application",
           "flake-utils"
         ],
         "nixos": [
-          "rydnr-sandbox-artifact-infrastructure",
+          "pythoneda-shared-artifact-application",
           "nixos"
         ],
         "pythoneda-shared-git-shared": [
-          "rydnr-sandbox-artifact-infrastructure",
+          "pythoneda-shared-artifact-application",
           "INDIRECT-INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-git-shared"
         ],
         "pythoneda-shared-pythoneda-banner": [
-          "rydnr-sandbox-artifact-infrastructure",
+          "pythoneda-shared-artifact-application",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
-          "rydnr-sandbox-artifact-infrastructure",
+          "pythoneda-shared-artifact-application",
           "pythoneda-shared-pythoneda-domain"
         ],
-        "stringtemplate3": "stringtemplate3_7"
+        "stringtemplate3": "stringtemplate3_3"
+      },
+      "locked": {
+        "dir": "shared",
+        "lastModified": 1695896562,
+        "narHash": "sha256-X4rKfVJR4qoTmUpR0dmi3wvdLk4kgGP/N9hogFpr2C8=",
+        "owner": "pythoneda-shared-nix-flake",
+        "repo": "shared-artifact",
+        "rev": "7b8b29b6cf1d5b977a71db16cadf857a7fd68212",
+        "type": "github"
+      },
+      "original": {
+        "dir": "shared",
+        "owner": "pythoneda-shared-nix-flake",
+        "ref": "0.0.2",
+        "repo": "shared-artifact",
+        "type": "github"
+      }
+    },
+    "INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared_3": {
+      "inputs": {
+        "flake-utils": [
+          "pythoneda-shared-artifact-infrastructure",
+          "flake-utils"
+        ],
+        "nixos": [
+          "pythoneda-shared-artifact-infrastructure",
+          "nixos"
+        ],
+        "pythoneda-shared-git-shared": [
+          "pythoneda-shared-artifact-infrastructure",
+          "INDIRECT-INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-git-shared"
+        ],
+        "pythoneda-shared-pythoneda-banner": [
+          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-shared-pythoneda-banner"
+        ],
+        "pythoneda-shared-pythoneda-domain": [
+          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-shared-pythoneda-domain"
+        ],
+        "stringtemplate3": "stringtemplate3_4"
       },
       "locked": {
         "dir": "shared",
@@ -234,28 +234,28 @@
     "INDIRECT-INDIRECT-pythoneda-shared-code-requests-events": {
       "inputs": {
         "flake-utils": [
-          "pythoneda-shared-artifact-application",
+          "pythoneda-sandbox-python-artifact-infrastructure",
           "flake-utils"
         ],
         "nixos": [
-          "pythoneda-shared-artifact-application",
+          "pythoneda-sandbox-python-artifact-infrastructure",
           "nixos"
         ],
-        "pythoneda-shared-artifact-changes-shared": "pythoneda-shared-artifact-changes-shared",
+        "pythoneda-shared-artifact-changes-shared": "pythoneda-shared-artifact-changes-shared_3",
         "pythoneda-shared-code-requests-shared": [
-          "pythoneda-shared-artifact-application",
+          "pythoneda-sandbox-python-artifact-infrastructure",
           "INDIRECT-INDIRECT-pythoneda-shared-code-requests-shared"
         ],
         "pythoneda-shared-nix-flake-shared": [
-          "pythoneda-shared-artifact-application",
+          "pythoneda-sandbox-python-artifact-infrastructure",
           "INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared"
         ],
         "pythoneda-shared-pythoneda-banner": [
-          "pythoneda-shared-artifact-application",
+          "pythoneda-sandbox-python-artifact-infrastructure",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
-          "pythoneda-shared-artifact-application",
+          "pythoneda-sandbox-python-artifact-infrastructure",
           "pythoneda-shared-pythoneda-domain"
         ]
       },
@@ -279,28 +279,28 @@
     "INDIRECT-INDIRECT-pythoneda-shared-code-requests-events_2": {
       "inputs": {
         "flake-utils": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-shared-artifact-application",
           "flake-utils"
         ],
         "nixos": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-shared-artifact-application",
           "nixos"
         ],
-        "pythoneda-shared-artifact-changes-shared": "pythoneda-shared-artifact-changes-shared_3",
+        "pythoneda-shared-artifact-changes-shared": "pythoneda-shared-artifact-changes-shared_5",
         "pythoneda-shared-code-requests-shared": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-shared-artifact-application",
           "INDIRECT-INDIRECT-pythoneda-shared-code-requests-shared"
         ],
         "pythoneda-shared-nix-flake-shared": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-shared-artifact-application",
           "INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared"
         ],
         "pythoneda-shared-pythoneda-banner": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-shared-artifact-application",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-shared-artifact-application",
           "pythoneda-shared-pythoneda-domain"
         ]
       },
@@ -324,28 +324,28 @@
     "INDIRECT-INDIRECT-pythoneda-shared-code-requests-events_3": {
       "inputs": {
         "flake-utils": [
-          "rydnr-sandbox-artifact-infrastructure",
+          "pythoneda-shared-artifact-infrastructure",
           "flake-utils"
         ],
         "nixos": [
-          "rydnr-sandbox-artifact-infrastructure",
+          "pythoneda-shared-artifact-infrastructure",
           "nixos"
         ],
-        "pythoneda-shared-artifact-changes-shared": "pythoneda-shared-artifact-changes-shared_12",
+        "pythoneda-shared-artifact-changes-shared": "pythoneda-shared-artifact-changes-shared_7",
         "pythoneda-shared-code-requests-shared": [
-          "rydnr-sandbox-artifact-infrastructure",
+          "pythoneda-shared-artifact-infrastructure",
           "INDIRECT-INDIRECT-pythoneda-shared-code-requests-shared"
         ],
         "pythoneda-shared-nix-flake-shared": [
-          "rydnr-sandbox-artifact-infrastructure",
+          "pythoneda-shared-artifact-infrastructure",
           "INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared"
         ],
         "pythoneda-shared-pythoneda-banner": [
-          "rydnr-sandbox-artifact-infrastructure",
+          "pythoneda-shared-artifact-infrastructure",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
-          "rydnr-sandbox-artifact-infrastructure",
+          "pythoneda-shared-artifact-infrastructure",
           "pythoneda-shared-pythoneda-domain"
         ]
       },
@@ -369,23 +369,23 @@
     "INDIRECT-INDIRECT-pythoneda-shared-code-requests-shared": {
       "inputs": {
         "flake-utils": [
-          "pythoneda-shared-artifact-application",
+          "pythoneda-sandbox-python-artifact-infrastructure",
           "flake-utils"
         ],
         "nixos": [
-          "pythoneda-shared-artifact-application",
+          "pythoneda-sandbox-python-artifact-infrastructure",
           "nixos"
         ],
         "pythoneda-shared-nix-flake-shared": [
-          "pythoneda-shared-artifact-application",
+          "pythoneda-sandbox-python-artifact-infrastructure",
           "INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared"
         ],
         "pythoneda-shared-pythoneda-banner": [
-          "pythoneda-shared-artifact-application",
+          "pythoneda-sandbox-python-artifact-infrastructure",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
-          "pythoneda-shared-artifact-application",
+          "pythoneda-sandbox-python-artifact-infrastructure",
           "pythoneda-shared-pythoneda-domain"
         ]
       },
@@ -409,23 +409,23 @@
     "INDIRECT-INDIRECT-pythoneda-shared-code-requests-shared_2": {
       "inputs": {
         "flake-utils": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-shared-artifact-application",
           "flake-utils"
         ],
         "nixos": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-shared-artifact-application",
           "nixos"
         ],
         "pythoneda-shared-nix-flake-shared": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-shared-artifact-application",
           "INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared"
         ],
         "pythoneda-shared-pythoneda-banner": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-shared-artifact-application",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-shared-artifact-application",
           "pythoneda-shared-pythoneda-domain"
         ]
       },
@@ -449,23 +449,23 @@
     "INDIRECT-INDIRECT-pythoneda-shared-code-requests-shared_3": {
       "inputs": {
         "flake-utils": [
-          "rydnr-sandbox-artifact-infrastructure",
+          "pythoneda-shared-artifact-infrastructure",
           "flake-utils"
         ],
         "nixos": [
-          "rydnr-sandbox-artifact-infrastructure",
+          "pythoneda-shared-artifact-infrastructure",
           "nixos"
         ],
         "pythoneda-shared-nix-flake-shared": [
-          "rydnr-sandbox-artifact-infrastructure",
+          "pythoneda-shared-artifact-infrastructure",
           "INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared"
         ],
         "pythoneda-shared-pythoneda-banner": [
-          "rydnr-sandbox-artifact-infrastructure",
+          "pythoneda-shared-artifact-infrastructure",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
-          "rydnr-sandbox-artifact-infrastructure",
+          "pythoneda-shared-artifact-infrastructure",
           "pythoneda-shared-pythoneda-domain"
         ]
       },
@@ -489,31 +489,31 @@
     "INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared": {
       "inputs": {
         "flake-utils": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-sandbox-python-artifact",
           "pythoneda-shared-artifact-shared",
           "flake-utils"
         ],
         "nixos": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-sandbox-python-artifact",
           "pythoneda-shared-artifact-shared",
           "nixos"
         ],
         "pythoneda-shared-git-shared": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-sandbox-python-artifact",
           "pythoneda-shared-artifact-shared",
           "pythoneda-shared-git-shared"
         ],
         "pythoneda-shared-pythoneda-banner": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-sandbox-python-artifact",
           "pythoneda-shared-artifact-shared",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-sandbox-python-artifact",
           "pythoneda-shared-artifact-shared",
           "pythoneda-shared-pythoneda-domain"
         ],
-        "stringtemplate3": "stringtemplate3_3"
+        "stringtemplate3": "stringtemplate3"
       },
       "locked": {
         "dir": "shared",
@@ -535,68 +535,27 @@
     "INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared_2": {
       "inputs": {
         "flake-utils": [
+          "pythoneda-shared-artifact-infrastructure",
           "pythoneda-shared-artifact-shared",
           "flake-utils"
         ],
         "nixos": [
+          "pythoneda-shared-artifact-infrastructure",
           "pythoneda-shared-artifact-shared",
           "nixos"
         ],
         "pythoneda-shared-git-shared": [
+          "pythoneda-shared-artifact-infrastructure",
           "pythoneda-shared-artifact-shared",
           "pythoneda-shared-git-shared"
         ],
         "pythoneda-shared-pythoneda-banner": [
+          "pythoneda-shared-artifact-infrastructure",
           "pythoneda-shared-artifact-shared",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
-          "pythoneda-shared-artifact-shared",
-          "pythoneda-shared-pythoneda-domain"
-        ],
-        "stringtemplate3": "stringtemplate3_4"
-      },
-      "locked": {
-        "dir": "shared",
-        "lastModified": 1695896562,
-        "narHash": "sha256-X4rKfVJR4qoTmUpR0dmi3wvdLk4kgGP/N9hogFpr2C8=",
-        "owner": "pythoneda-shared-nix-flake",
-        "repo": "shared-artifact",
-        "rev": "7b8b29b6cf1d5b977a71db16cadf857a7fd68212",
-        "type": "github"
-      },
-      "original": {
-        "dir": "shared",
-        "owner": "pythoneda-shared-nix-flake",
-        "ref": "0.0.2",
-        "repo": "shared-artifact",
-        "type": "github"
-      }
-    },
-    "INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared_3": {
-      "inputs": {
-        "flake-utils": [
-          "pythoneda-shared-pythoneda-application",
-          "pythoneda-shared-artifact-shared",
-          "flake-utils"
-        ],
-        "nixos": [
-          "pythoneda-shared-pythoneda-application",
-          "pythoneda-shared-artifact-shared",
-          "nixos"
-        ],
-        "pythoneda-shared-git-shared": [
-          "pythoneda-shared-pythoneda-application",
-          "pythoneda-shared-artifact-shared",
-          "pythoneda-shared-git-shared"
-        ],
-        "pythoneda-shared-pythoneda-banner": [
-          "pythoneda-shared-pythoneda-application",
-          "pythoneda-shared-artifact-shared",
-          "pythoneda-shared-pythoneda-banner"
-        ],
-        "pythoneda-shared-pythoneda-domain": [
-          "pythoneda-shared-pythoneda-application",
+          "pythoneda-shared-artifact-infrastructure",
           "pythoneda-shared-artifact-shared",
           "pythoneda-shared-pythoneda-domain"
         ],
@@ -619,30 +578,25 @@
         "type": "github"
       }
     },
-    "INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared_4": {
+    "INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared_3": {
       "inputs": {
         "flake-utils": [
-          "rydnr-sandbox-artifact",
           "pythoneda-shared-artifact-shared",
           "flake-utils"
         ],
         "nixos": [
-          "rydnr-sandbox-artifact",
           "pythoneda-shared-artifact-shared",
           "nixos"
         ],
         "pythoneda-shared-git-shared": [
-          "rydnr-sandbox-artifact",
           "pythoneda-shared-artifact-shared",
           "pythoneda-shared-git-shared"
         ],
         "pythoneda-shared-pythoneda-banner": [
-          "rydnr-sandbox-artifact",
           "pythoneda-shared-artifact-shared",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
-          "rydnr-sandbox-artifact",
           "pythoneda-shared-artifact-shared",
           "pythoneda-shared-pythoneda-domain"
         ],
@@ -665,31 +619,77 @@
         "type": "github"
       }
     },
-    "INDIRECT-pythoneda-shared-artifact-changes-events": {
+    "INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared_4": {
       "inputs": {
         "flake-utils": [
-          "pythoneda-shared-artifact-application",
+          "pythoneda-shared-pythoneda-application",
+          "pythoneda-shared-artifact-shared",
           "flake-utils"
         ],
         "nixos": [
-          "pythoneda-shared-artifact-application",
+          "pythoneda-shared-pythoneda-application",
+          "pythoneda-shared-artifact-shared",
           "nixos"
         ],
-        "pythoneda-shared-artifact-changes-shared": "pythoneda-shared-artifact-changes-shared_2",
-        "pythoneda-shared-code-requests-events": [
-          "pythoneda-shared-artifact-application",
-          "INDIRECT-INDIRECT-pythoneda-shared-code-requests-events"
-        ],
-        "pythoneda-shared-code-requests-shared": [
-          "pythoneda-shared-artifact-application",
-          "INDIRECT-INDIRECT-pythoneda-shared-code-requests-shared"
+        "pythoneda-shared-git-shared": [
+          "pythoneda-shared-pythoneda-application",
+          "pythoneda-shared-artifact-shared",
+          "pythoneda-shared-git-shared"
         ],
         "pythoneda-shared-pythoneda-banner": [
-          "pythoneda-shared-artifact-application",
+          "pythoneda-shared-pythoneda-application",
+          "pythoneda-shared-artifact-shared",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
-          "pythoneda-shared-artifact-application",
+          "pythoneda-shared-pythoneda-application",
+          "pythoneda-shared-artifact-shared",
+          "pythoneda-shared-pythoneda-domain"
+        ],
+        "stringtemplate3": "stringtemplate3_7"
+      },
+      "locked": {
+        "dir": "shared",
+        "lastModified": 1695896562,
+        "narHash": "sha256-X4rKfVJR4qoTmUpR0dmi3wvdLk4kgGP/N9hogFpr2C8=",
+        "owner": "pythoneda-shared-nix-flake",
+        "repo": "shared-artifact",
+        "rev": "7b8b29b6cf1d5b977a71db16cadf857a7fd68212",
+        "type": "github"
+      },
+      "original": {
+        "dir": "shared",
+        "owner": "pythoneda-shared-nix-flake",
+        "ref": "0.0.2",
+        "repo": "shared-artifact",
+        "type": "github"
+      }
+    },
+    "INDIRECT-pythoneda-shared-artifact-changes-events": {
+      "inputs": {
+        "flake-utils": [
+          "pythoneda-sandbox-python-artifact-infrastructure",
+          "flake-utils"
+        ],
+        "nixos": [
+          "pythoneda-sandbox-python-artifact-infrastructure",
+          "nixos"
+        ],
+        "pythoneda-shared-artifact-changes-shared": "pythoneda-shared-artifact-changes-shared_4",
+        "pythoneda-shared-code-requests-events": [
+          "pythoneda-sandbox-python-artifact-infrastructure",
+          "INDIRECT-INDIRECT-pythoneda-shared-code-requests-events"
+        ],
+        "pythoneda-shared-code-requests-shared": [
+          "pythoneda-sandbox-python-artifact-infrastructure",
+          "INDIRECT-INDIRECT-pythoneda-shared-code-requests-shared"
+        ],
+        "pythoneda-shared-pythoneda-banner": [
+          "pythoneda-sandbox-python-artifact-infrastructure",
+          "pythoneda-shared-pythoneda-banner"
+        ],
+        "pythoneda-shared-pythoneda-domain": [
+          "pythoneda-sandbox-python-artifact-infrastructure",
           "pythoneda-shared-pythoneda-domain"
         ]
       },
@@ -713,73 +713,28 @@
     "INDIRECT-pythoneda-shared-artifact-changes-events_2": {
       "inputs": {
         "flake-utils": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-shared-artifact-application",
           "flake-utils"
         ],
         "nixos": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-shared-artifact-application",
           "nixos"
         ],
-        "pythoneda-shared-artifact-changes-shared": "pythoneda-shared-artifact-changes-shared_4",
+        "pythoneda-shared-artifact-changes-shared": "pythoneda-shared-artifact-changes-shared_6",
         "pythoneda-shared-code-requests-events": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-shared-artifact-application",
           "INDIRECT-INDIRECT-pythoneda-shared-code-requests-events"
         ],
         "pythoneda-shared-code-requests-shared": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-shared-artifact-application",
           "INDIRECT-INDIRECT-pythoneda-shared-code-requests-shared"
         ],
         "pythoneda-shared-pythoneda-banner": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-shared-artifact-application",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
-          "pythoneda-shared-artifact-infrastructure",
-          "pythoneda-shared-pythoneda-domain"
-        ]
-      },
-      "locked": {
-        "dir": "events",
-        "lastModified": 1698154959,
-        "narHash": "sha256-piaWntjQYiXiBvdB2AZCTiybXnptkoHYpmItk/+PvL4=",
-        "owner": "pythoneda-shared-artifact-changes",
-        "repo": "events-artifact",
-        "rev": "14281c7a5d1f247a72f7042b5b125798dd9a852e",
-        "type": "github"
-      },
-      "original": {
-        "dir": "events",
-        "owner": "pythoneda-shared-artifact-changes",
-        "ref": "0.0.4",
-        "repo": "events-artifact",
-        "type": "github"
-      }
-    },
-    "INDIRECT-pythoneda-shared-artifact-changes-events_3": {
-      "inputs": {
-        "flake-utils": [
-          "rydnr-sandbox-artifact-infrastructure",
-          "flake-utils"
-        ],
-        "nixos": [
-          "rydnr-sandbox-artifact-infrastructure",
-          "nixos"
-        ],
-        "pythoneda-shared-artifact-changes-shared": "pythoneda-shared-artifact-changes-shared_13",
-        "pythoneda-shared-code-requests-events": [
-          "rydnr-sandbox-artifact-infrastructure",
-          "INDIRECT-INDIRECT-pythoneda-shared-code-requests-events"
-        ],
-        "pythoneda-shared-code-requests-shared": [
-          "rydnr-sandbox-artifact-infrastructure",
-          "INDIRECT-INDIRECT-pythoneda-shared-code-requests-shared"
-        ],
-        "pythoneda-shared-pythoneda-banner": [
-          "rydnr-sandbox-artifact-infrastructure",
-          "pythoneda-shared-pythoneda-banner"
-        ],
-        "pythoneda-shared-pythoneda-domain": [
-          "rydnr-sandbox-artifact-infrastructure",
+          "pythoneda-shared-artifact-application",
           "pythoneda-shared-pythoneda-domain"
         ]
       },
@@ -803,33 +758,33 @@
     "INDIRECT-pythoneda-shared-code-requests-events": {
       "inputs": {
         "flake-utils": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-sandbox-python-artifact",
           "pythoneda-shared-artifact-shared",
           "flake-utils"
         ],
         "nixos": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-sandbox-python-artifact",
           "pythoneda-shared-artifact-shared",
           "nixos"
         ],
-        "pythoneda-shared-artifact-changes-shared": "pythoneda-shared-artifact-changes-shared_5",
+        "pythoneda-shared-artifact-changes-shared": "pythoneda-shared-artifact-changes-shared",
         "pythoneda-shared-code-requests-shared": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-sandbox-python-artifact",
           "pythoneda-shared-artifact-shared",
           "INDIRECT-pythoneda-shared-code-requests-shared"
         ],
         "pythoneda-shared-nix-flake-shared": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-sandbox-python-artifact",
           "pythoneda-shared-artifact-shared",
           "INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared"
         ],
         "pythoneda-shared-pythoneda-banner": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-sandbox-python-artifact",
           "pythoneda-shared-artifact-shared",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-sandbox-python-artifact",
           "pythoneda-shared-artifact-shared",
           "pythoneda-shared-pythoneda-domain"
         ]
@@ -854,27 +809,33 @@
     "INDIRECT-pythoneda-shared-code-requests-events_2": {
       "inputs": {
         "flake-utils": [
+          "pythoneda-shared-artifact-infrastructure",
           "pythoneda-shared-artifact-shared",
           "flake-utils"
         ],
         "nixos": [
+          "pythoneda-shared-artifact-infrastructure",
           "pythoneda-shared-artifact-shared",
           "nixos"
         ],
-        "pythoneda-shared-artifact-changes-shared": "pythoneda-shared-artifact-changes-shared_6",
+        "pythoneda-shared-artifact-changes-shared": "pythoneda-shared-artifact-changes-shared_9",
         "pythoneda-shared-code-requests-shared": [
+          "pythoneda-shared-artifact-infrastructure",
           "pythoneda-shared-artifact-shared",
           "INDIRECT-pythoneda-shared-code-requests-shared"
         ],
         "pythoneda-shared-nix-flake-shared": [
+          "pythoneda-shared-artifact-infrastructure",
           "pythoneda-shared-artifact-shared",
           "INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared"
         ],
         "pythoneda-shared-pythoneda-banner": [
+          "pythoneda-shared-artifact-infrastructure",
           "pythoneda-shared-artifact-shared",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
+          "pythoneda-shared-artifact-infrastructure",
           "pythoneda-shared-artifact-shared",
           "pythoneda-shared-pythoneda-domain"
         ]
@@ -899,33 +860,27 @@
     "INDIRECT-pythoneda-shared-code-requests-events_3": {
       "inputs": {
         "flake-utils": [
-          "pythoneda-shared-pythoneda-application",
           "pythoneda-shared-artifact-shared",
           "flake-utils"
         ],
         "nixos": [
-          "pythoneda-shared-pythoneda-application",
           "pythoneda-shared-artifact-shared",
           "nixos"
         ],
-        "pythoneda-shared-artifact-changes-shared": "pythoneda-shared-artifact-changes-shared_8",
+        "pythoneda-shared-artifact-changes-shared": "pythoneda-shared-artifact-changes-shared_10",
         "pythoneda-shared-code-requests-shared": [
-          "pythoneda-shared-pythoneda-application",
           "pythoneda-shared-artifact-shared",
           "INDIRECT-pythoneda-shared-code-requests-shared"
         ],
         "pythoneda-shared-nix-flake-shared": [
-          "pythoneda-shared-pythoneda-application",
           "pythoneda-shared-artifact-shared",
           "INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared"
         ],
         "pythoneda-shared-pythoneda-banner": [
-          "pythoneda-shared-pythoneda-application",
           "pythoneda-shared-artifact-shared",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
-          "pythoneda-shared-pythoneda-application",
           "pythoneda-shared-artifact-shared",
           "pythoneda-shared-pythoneda-domain"
         ]
@@ -950,33 +905,33 @@
     "INDIRECT-pythoneda-shared-code-requests-events_4": {
       "inputs": {
         "flake-utils": [
-          "rydnr-sandbox-artifact",
+          "pythoneda-shared-pythoneda-application",
           "pythoneda-shared-artifact-shared",
           "flake-utils"
         ],
         "nixos": [
-          "rydnr-sandbox-artifact",
+          "pythoneda-shared-pythoneda-application",
           "pythoneda-shared-artifact-shared",
           "nixos"
         ],
-        "pythoneda-shared-artifact-changes-shared": "pythoneda-shared-artifact-changes-shared_10",
+        "pythoneda-shared-artifact-changes-shared": "pythoneda-shared-artifact-changes-shared_12",
         "pythoneda-shared-code-requests-shared": [
-          "rydnr-sandbox-artifact",
+          "pythoneda-shared-pythoneda-application",
           "pythoneda-shared-artifact-shared",
           "INDIRECT-pythoneda-shared-code-requests-shared"
         ],
         "pythoneda-shared-nix-flake-shared": [
-          "rydnr-sandbox-artifact",
+          "pythoneda-shared-pythoneda-application",
           "pythoneda-shared-artifact-shared",
           "INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared"
         ],
         "pythoneda-shared-pythoneda-banner": [
-          "rydnr-sandbox-artifact",
+          "pythoneda-shared-pythoneda-application",
           "pythoneda-shared-artifact-shared",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
-          "rydnr-sandbox-artifact",
+          "pythoneda-shared-pythoneda-application",
           "pythoneda-shared-artifact-shared",
           "pythoneda-shared-pythoneda-domain"
         ]
@@ -1001,27 +956,27 @@
     "INDIRECT-pythoneda-shared-code-requests-jupyterlab": {
       "inputs": {
         "flake-utils": [
-          "pythoneda-shared-artifact-application",
+          "pythoneda-sandbox-python-artifact-infrastructure",
           "flake-utils"
         ],
         "nixos": [
-          "pythoneda-shared-artifact-application",
+          "pythoneda-sandbox-python-artifact-infrastructure",
           "nixos"
         ],
         "pythoneda-shared-code-requests-shared": [
-          "pythoneda-shared-artifact-application",
+          "pythoneda-sandbox-python-artifact-infrastructure",
           "INDIRECT-INDIRECT-pythoneda-shared-code-requests-shared"
         ],
         "pythoneda-shared-nix-flake-shared": [
-          "pythoneda-shared-artifact-application",
+          "pythoneda-sandbox-python-artifact-infrastructure",
           "INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared"
         ],
         "pythoneda-shared-pythoneda-banner": [
-          "pythoneda-shared-artifact-application",
+          "pythoneda-sandbox-python-artifact-infrastructure",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
-          "pythoneda-shared-artifact-application",
+          "pythoneda-sandbox-python-artifact-infrastructure",
           "pythoneda-shared-pythoneda-domain"
         ]
       },
@@ -1045,27 +1000,27 @@
     "INDIRECT-pythoneda-shared-code-requests-jupyterlab_2": {
       "inputs": {
         "flake-utils": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-shared-artifact-application",
           "flake-utils"
         ],
         "nixos": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-shared-artifact-application",
           "nixos"
         ],
         "pythoneda-shared-code-requests-shared": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-shared-artifact-application",
           "INDIRECT-INDIRECT-pythoneda-shared-code-requests-shared"
         ],
         "pythoneda-shared-nix-flake-shared": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-shared-artifact-application",
           "INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared"
         ],
         "pythoneda-shared-pythoneda-banner": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-shared-artifact-application",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-shared-artifact-application",
           "pythoneda-shared-pythoneda-domain"
         ]
       },
@@ -1089,27 +1044,27 @@
     "INDIRECT-pythoneda-shared-code-requests-jupyterlab_3": {
       "inputs": {
         "flake-utils": [
-          "rydnr-sandbox-artifact-infrastructure",
+          "pythoneda-shared-artifact-infrastructure",
           "flake-utils"
         ],
         "nixos": [
-          "rydnr-sandbox-artifact-infrastructure",
+          "pythoneda-shared-artifact-infrastructure",
           "nixos"
         ],
         "pythoneda-shared-code-requests-shared": [
-          "rydnr-sandbox-artifact-infrastructure",
+          "pythoneda-shared-artifact-infrastructure",
           "INDIRECT-INDIRECT-pythoneda-shared-code-requests-shared"
         ],
         "pythoneda-shared-nix-flake-shared": [
-          "rydnr-sandbox-artifact-infrastructure",
+          "pythoneda-shared-artifact-infrastructure",
           "INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared"
         ],
         "pythoneda-shared-pythoneda-banner": [
-          "rydnr-sandbox-artifact-infrastructure",
+          "pythoneda-shared-artifact-infrastructure",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
-          "rydnr-sandbox-artifact-infrastructure",
+          "pythoneda-shared-artifact-infrastructure",
           "pythoneda-shared-pythoneda-domain"
         ]
       },
@@ -1133,27 +1088,27 @@
     "INDIRECT-pythoneda-shared-code-requests-shared": {
       "inputs": {
         "flake-utils": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-sandbox-python-artifact",
           "pythoneda-shared-artifact-shared",
           "flake-utils"
         ],
         "nixos": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-sandbox-python-artifact",
           "pythoneda-shared-artifact-shared",
           "nixos"
         ],
         "pythoneda-shared-nix-flake-shared": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-sandbox-python-artifact",
           "pythoneda-shared-artifact-shared",
           "INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared"
         ],
         "pythoneda-shared-pythoneda-banner": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-sandbox-python-artifact",
           "pythoneda-shared-artifact-shared",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-sandbox-python-artifact",
           "pythoneda-shared-artifact-shared",
           "pythoneda-shared-pythoneda-domain"
         ]
@@ -1178,22 +1133,27 @@
     "INDIRECT-pythoneda-shared-code-requests-shared_2": {
       "inputs": {
         "flake-utils": [
+          "pythoneda-shared-artifact-infrastructure",
           "pythoneda-shared-artifact-shared",
           "flake-utils"
         ],
         "nixos": [
+          "pythoneda-shared-artifact-infrastructure",
           "pythoneda-shared-artifact-shared",
           "nixos"
         ],
         "pythoneda-shared-nix-flake-shared": [
+          "pythoneda-shared-artifact-infrastructure",
           "pythoneda-shared-artifact-shared",
           "INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared"
         ],
         "pythoneda-shared-pythoneda-banner": [
+          "pythoneda-shared-artifact-infrastructure",
           "pythoneda-shared-artifact-shared",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
+          "pythoneda-shared-artifact-infrastructure",
           "pythoneda-shared-artifact-shared",
           "pythoneda-shared-pythoneda-domain"
         ]
@@ -1218,27 +1178,22 @@
     "INDIRECT-pythoneda-shared-code-requests-shared_3": {
       "inputs": {
         "flake-utils": [
-          "pythoneda-shared-pythoneda-application",
           "pythoneda-shared-artifact-shared",
           "flake-utils"
         ],
         "nixos": [
-          "pythoneda-shared-pythoneda-application",
           "pythoneda-shared-artifact-shared",
           "nixos"
         ],
         "pythoneda-shared-nix-flake-shared": [
-          "pythoneda-shared-pythoneda-application",
           "pythoneda-shared-artifact-shared",
           "INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared"
         ],
         "pythoneda-shared-pythoneda-banner": [
-          "pythoneda-shared-pythoneda-application",
           "pythoneda-shared-artifact-shared",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
-          "pythoneda-shared-pythoneda-application",
           "pythoneda-shared-artifact-shared",
           "pythoneda-shared-pythoneda-domain"
         ]
@@ -1263,27 +1218,27 @@
     "INDIRECT-pythoneda-shared-code-requests-shared_4": {
       "inputs": {
         "flake-utils": [
-          "rydnr-sandbox-artifact",
+          "pythoneda-shared-pythoneda-application",
           "pythoneda-shared-artifact-shared",
           "flake-utils"
         ],
         "nixos": [
-          "rydnr-sandbox-artifact",
+          "pythoneda-shared-pythoneda-application",
           "pythoneda-shared-artifact-shared",
           "nixos"
         ],
         "pythoneda-shared-nix-flake-shared": [
-          "rydnr-sandbox-artifact",
+          "pythoneda-shared-pythoneda-application",
           "pythoneda-shared-artifact-shared",
           "INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared"
         ],
         "pythoneda-shared-pythoneda-banner": [
-          "rydnr-sandbox-artifact",
+          "pythoneda-shared-pythoneda-application",
           "pythoneda-shared-artifact-shared",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
-          "rydnr-sandbox-artifact",
+          "pythoneda-shared-pythoneda-application",
           "pythoneda-shared-artifact-shared",
           "pythoneda-shared-pythoneda-domain"
         ]
@@ -1337,7 +1292,40 @@
         "type": "github"
       }
     },
-    "pythoneda-shared-artifact-application": {
+    "pythoneda-sandbox-python-artifact": {
+      "inputs": {
+        "flake-utils": [
+          "flake-utils"
+        ],
+        "nixos": [
+          "nixos"
+        ],
+        "pythoneda-shared-artifact-shared": "pythoneda-shared-artifact-shared",
+        "pythoneda-shared-pythoneda-banner": [
+          "pythoneda-shared-pythoneda-banner"
+        ],
+        "pythoneda-shared-pythoneda-domain": [
+          "pythoneda-shared-pythoneda-domain"
+        ]
+      },
+      "locked": {
+        "dir": "python-artifact",
+        "lastModified": 1699095664,
+        "narHash": "sha256-ZFho2IiyEm1AOJshS+nQI50hOs2JOgaf6btlzxedDJ0=",
+        "owner": "pythoneda-sandbox",
+        "repo": "python-artifact-artifact",
+        "rev": "e445300408aa93dc864721cf04f65e2fd0856376",
+        "type": "github"
+      },
+      "original": {
+        "dir": "python-artifact",
+        "owner": "pythoneda-sandbox",
+        "ref": "0.0.2",
+        "repo": "python-artifact-artifact",
+        "type": "github"
+      }
+    },
+    "pythoneda-sandbox-python-artifact-infrastructure": {
       "inputs": {
         "INDIRECT-INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-git-shared": "INDIRECT-INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-git-shared",
         "INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared": "INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared",
@@ -1345,6 +1333,49 @@
         "INDIRECT-INDIRECT-pythoneda-shared-code-requests-shared": "INDIRECT-INDIRECT-pythoneda-shared-code-requests-shared",
         "INDIRECT-pythoneda-shared-artifact-changes-events": "INDIRECT-pythoneda-shared-artifact-changes-events",
         "INDIRECT-pythoneda-shared-code-requests-jupyterlab": "INDIRECT-pythoneda-shared-code-requests-jupyterlab",
+        "flake-utils": [
+          "flake-utils"
+        ],
+        "nixos": [
+          "nixos"
+        ],
+        "pythoneda-sandbox-python-artifact": [
+          "pythoneda-sandbox-python-artifact"
+        ],
+        "pythoneda-shared-artifact-changes-events-infrastructure": "pythoneda-shared-artifact-changes-events-infrastructure",
+        "pythoneda-shared-pythoneda-banner": [
+          "pythoneda-shared-pythoneda-banner"
+        ],
+        "pythoneda-shared-pythoneda-domain": [
+          "pythoneda-shared-pythoneda-domain"
+        ],
+        "pythoneda-shared-pythoneda-infrastructure": "pythoneda-shared-pythoneda-infrastructure"
+      },
+      "locked": {
+        "dir": "python-artifact-infrastructure",
+        "lastModified": 1699172344,
+        "narHash": "sha256-ainPFkrQ6ymp2oORoSVOHYWB7Rwq+c400EvlnVvS0Bg=",
+        "owner": "pythoneda-sandbox",
+        "repo": "python-artifact-infrastructure-artifact",
+        "rev": "f555d3b87f8c54d9c224c2bda975cce4ca5001d1",
+        "type": "github"
+      },
+      "original": {
+        "dir": "python-artifact-infrastructure",
+        "owner": "pythoneda-sandbox",
+        "ref": "0.0.3",
+        "repo": "python-artifact-infrastructure-artifact",
+        "type": "github"
+      }
+    },
+    "pythoneda-shared-artifact-application": {
+      "inputs": {
+        "INDIRECT-INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-git-shared": "INDIRECT-INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-git-shared_2",
+        "INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared": "INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared_2",
+        "INDIRECT-INDIRECT-pythoneda-shared-code-requests-events": "INDIRECT-INDIRECT-pythoneda-shared-code-requests-events_2",
+        "INDIRECT-INDIRECT-pythoneda-shared-code-requests-shared": "INDIRECT-INDIRECT-pythoneda-shared-code-requests-shared_2",
+        "INDIRECT-pythoneda-shared-artifact-changes-events": "INDIRECT-pythoneda-shared-artifact-changes-events_2",
+        "INDIRECT-pythoneda-shared-code-requests-jupyterlab": "INDIRECT-pythoneda-shared-code-requests-jupyterlab_2",
         "flake-utils": [
           "flake-utils"
         ],
@@ -1366,17 +1397,17 @@
       },
       "locked": {
         "dir": "application",
-        "lastModified": 1699012663,
-        "narHash": "sha256-lrKjvMX68/3ux3FCXl7ZGQ0vZ/FNwNnr60hR7hexYuQ=",
+        "lastModified": 1699170929,
+        "narHash": "sha256-4FaXPHYQBbprMqT7NbIIlWivlL6wJuB4YV/SV80WbWU=",
         "owner": "pythoneda-shared-artifact",
         "repo": "application-artifact",
-        "rev": "ef2e707ececb38f4d5815e34fac4ede4657f4566",
+        "rev": "3c9becd36fbd5ba86cb1a8369e61d9da2afd3d74",
         "type": "github"
       },
       "original": {
         "dir": "application",
         "owner": "pythoneda-shared-artifact",
-        "ref": "0.0.1",
+        "ref": "0.0.3",
         "repo": "application-artifact",
         "type": "github"
       }
@@ -1384,27 +1415,33 @@
     "pythoneda-shared-artifact-changes-events": {
       "inputs": {
         "flake-utils": [
+          "pythoneda-sandbox-python-artifact",
           "pythoneda-shared-artifact-shared",
           "flake-utils"
         ],
         "nixos": [
+          "pythoneda-sandbox-python-artifact",
           "pythoneda-shared-artifact-shared",
           "nixos"
         ],
-        "pythoneda-shared-artifact-changes-shared": "pythoneda-shared-artifact-changes-shared_7",
+        "pythoneda-shared-artifact-changes-shared": "pythoneda-shared-artifact-changes-shared_2",
         "pythoneda-shared-code-requests-events": [
+          "pythoneda-sandbox-python-artifact",
           "pythoneda-shared-artifact-shared",
           "INDIRECT-pythoneda-shared-code-requests-events"
         ],
         "pythoneda-shared-code-requests-shared": [
+          "pythoneda-sandbox-python-artifact",
           "pythoneda-shared-artifact-shared",
           "INDIRECT-pythoneda-shared-code-requests-shared"
         ],
         "pythoneda-shared-pythoneda-banner": [
+          "pythoneda-sandbox-python-artifact",
           "pythoneda-shared-artifact-shared",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
+          "pythoneda-sandbox-python-artifact",
           "pythoneda-shared-artifact-shared",
           "pythoneda-shared-pythoneda-domain"
         ]
@@ -1429,31 +1466,31 @@
     "pythoneda-shared-artifact-changes-events-infrastructure": {
       "inputs": {
         "flake-utils": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-sandbox-python-artifact-infrastructure",
           "flake-utils"
         ],
         "nixos": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-sandbox-python-artifact-infrastructure",
           "nixos"
         ],
         "pythoneda-shared-artifact-changes-events": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-sandbox-python-artifact-infrastructure",
           "INDIRECT-pythoneda-shared-artifact-changes-events"
         ],
         "pythoneda-shared-code-requests-jupyterlab": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-sandbox-python-artifact-infrastructure",
           "INDIRECT-pythoneda-shared-code-requests-jupyterlab"
         ],
         "pythoneda-shared-pythoneda-banner": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-sandbox-python-artifact-infrastructure",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-sandbox-python-artifact-infrastructure",
           "pythoneda-shared-pythoneda-domain"
         ],
         "pythoneda-shared-pythoneda-infrastructure": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-sandbox-python-artifact-infrastructure",
           "pythoneda-shared-pythoneda-infrastructure"
         ]
       },
@@ -1477,31 +1514,31 @@
     "pythoneda-shared-artifact-changes-events-infrastructure_2": {
       "inputs": {
         "flake-utils": [
-          "rydnr-sandbox-artifact-infrastructure",
+          "pythoneda-shared-artifact-infrastructure",
           "flake-utils"
         ],
         "nixos": [
-          "rydnr-sandbox-artifact-infrastructure",
+          "pythoneda-shared-artifact-infrastructure",
           "nixos"
         ],
         "pythoneda-shared-artifact-changes-events": [
-          "rydnr-sandbox-artifact-infrastructure",
-          "INDIRECT-pythoneda-shared-artifact-changes-events"
+          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-shared-artifact-changes-events"
         ],
         "pythoneda-shared-code-requests-jupyterlab": [
-          "rydnr-sandbox-artifact-infrastructure",
+          "pythoneda-shared-artifact-infrastructure",
           "INDIRECT-pythoneda-shared-code-requests-jupyterlab"
         ],
         "pythoneda-shared-pythoneda-banner": [
-          "rydnr-sandbox-artifact-infrastructure",
+          "pythoneda-shared-artifact-infrastructure",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
-          "rydnr-sandbox-artifact-infrastructure",
+          "pythoneda-shared-artifact-infrastructure",
           "pythoneda-shared-pythoneda-domain"
         ],
         "pythoneda-shared-pythoneda-infrastructure": [
-          "rydnr-sandbox-artifact-infrastructure",
+          "pythoneda-shared-artifact-infrastructure",
           "pythoneda-shared-pythoneda-infrastructure"
         ]
       },
@@ -1525,34 +1562,28 @@
     "pythoneda-shared-artifact-changes-events_2": {
       "inputs": {
         "flake-utils": [
-          "pythoneda-shared-pythoneda-application",
-          "pythoneda-shared-artifact-shared",
+          "pythoneda-shared-artifact-infrastructure",
           "flake-utils"
         ],
         "nixos": [
-          "pythoneda-shared-pythoneda-application",
-          "pythoneda-shared-artifact-shared",
+          "pythoneda-shared-artifact-infrastructure",
           "nixos"
         ],
-        "pythoneda-shared-artifact-changes-shared": "pythoneda-shared-artifact-changes-shared_9",
+        "pythoneda-shared-artifact-changes-shared": "pythoneda-shared-artifact-changes-shared_8",
         "pythoneda-shared-code-requests-events": [
-          "pythoneda-shared-pythoneda-application",
-          "pythoneda-shared-artifact-shared",
-          "INDIRECT-pythoneda-shared-code-requests-events"
+          "pythoneda-shared-artifact-infrastructure",
+          "INDIRECT-INDIRECT-pythoneda-shared-code-requests-events"
         ],
         "pythoneda-shared-code-requests-shared": [
-          "pythoneda-shared-pythoneda-application",
-          "pythoneda-shared-artifact-shared",
-          "INDIRECT-pythoneda-shared-code-requests-shared"
+          "pythoneda-shared-artifact-infrastructure",
+          "INDIRECT-INDIRECT-pythoneda-shared-code-requests-shared"
         ],
         "pythoneda-shared-pythoneda-banner": [
-          "pythoneda-shared-pythoneda-application",
-          "pythoneda-shared-artifact-shared",
+          "pythoneda-shared-artifact-infrastructure",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
-          "pythoneda-shared-pythoneda-application",
-          "pythoneda-shared-artifact-shared",
+          "pythoneda-shared-artifact-infrastructure",
           "pythoneda-shared-pythoneda-domain"
         ]
       },
@@ -1576,33 +1607,78 @@
     "pythoneda-shared-artifact-changes-events_3": {
       "inputs": {
         "flake-utils": [
-          "rydnr-sandbox-artifact",
           "pythoneda-shared-artifact-shared",
           "flake-utils"
         ],
         "nixos": [
-          "rydnr-sandbox-artifact",
           "pythoneda-shared-artifact-shared",
           "nixos"
         ],
         "pythoneda-shared-artifact-changes-shared": "pythoneda-shared-artifact-changes-shared_11",
         "pythoneda-shared-code-requests-events": [
-          "rydnr-sandbox-artifact",
           "pythoneda-shared-artifact-shared",
           "INDIRECT-pythoneda-shared-code-requests-events"
         ],
         "pythoneda-shared-code-requests-shared": [
-          "rydnr-sandbox-artifact",
           "pythoneda-shared-artifact-shared",
           "INDIRECT-pythoneda-shared-code-requests-shared"
         ],
         "pythoneda-shared-pythoneda-banner": [
-          "rydnr-sandbox-artifact",
           "pythoneda-shared-artifact-shared",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
-          "rydnr-sandbox-artifact",
+          "pythoneda-shared-artifact-shared",
+          "pythoneda-shared-pythoneda-domain"
+        ]
+      },
+      "locked": {
+        "dir": "events",
+        "lastModified": 1698154959,
+        "narHash": "sha256-piaWntjQYiXiBvdB2AZCTiybXnptkoHYpmItk/+PvL4=",
+        "owner": "pythoneda-shared-artifact-changes",
+        "repo": "events-artifact",
+        "rev": "14281c7a5d1f247a72f7042b5b125798dd9a852e",
+        "type": "github"
+      },
+      "original": {
+        "dir": "events",
+        "owner": "pythoneda-shared-artifact-changes",
+        "ref": "0.0.4",
+        "repo": "events-artifact",
+        "type": "github"
+      }
+    },
+    "pythoneda-shared-artifact-changes-events_4": {
+      "inputs": {
+        "flake-utils": [
+          "pythoneda-shared-pythoneda-application",
+          "pythoneda-shared-artifact-shared",
+          "flake-utils"
+        ],
+        "nixos": [
+          "pythoneda-shared-pythoneda-application",
+          "pythoneda-shared-artifact-shared",
+          "nixos"
+        ],
+        "pythoneda-shared-artifact-changes-shared": "pythoneda-shared-artifact-changes-shared_13",
+        "pythoneda-shared-code-requests-events": [
+          "pythoneda-shared-pythoneda-application",
+          "pythoneda-shared-artifact-shared",
+          "INDIRECT-pythoneda-shared-code-requests-events"
+        ],
+        "pythoneda-shared-code-requests-shared": [
+          "pythoneda-shared-pythoneda-application",
+          "pythoneda-shared-artifact-shared",
+          "INDIRECT-pythoneda-shared-code-requests-shared"
+        ],
+        "pythoneda-shared-pythoneda-banner": [
+          "pythoneda-shared-pythoneda-application",
+          "pythoneda-shared-artifact-shared",
+          "pythoneda-shared-pythoneda-banner"
+        ],
+        "pythoneda-shared-pythoneda-domain": [
+          "pythoneda-shared-pythoneda-application",
           "pythoneda-shared-artifact-shared",
           "pythoneda-shared-pythoneda-domain"
         ]
@@ -1627,23 +1703,27 @@
     "pythoneda-shared-artifact-changes-shared": {
       "inputs": {
         "flake-utils": [
-          "pythoneda-shared-artifact-application",
-          "INDIRECT-INDIRECT-pythoneda-shared-code-requests-events",
+          "pythoneda-sandbox-python-artifact",
+          "pythoneda-shared-artifact-shared",
+          "INDIRECT-pythoneda-shared-code-requests-events",
           "flake-utils"
         ],
         "nixos": [
-          "pythoneda-shared-artifact-application",
-          "INDIRECT-INDIRECT-pythoneda-shared-code-requests-events",
+          "pythoneda-sandbox-python-artifact",
+          "pythoneda-shared-artifact-shared",
+          "INDIRECT-pythoneda-shared-code-requests-events",
           "nixos"
         ],
         "pythoneda-shared-pythoneda-banner": [
-          "pythoneda-shared-artifact-application",
-          "INDIRECT-INDIRECT-pythoneda-shared-code-requests-events",
+          "pythoneda-sandbox-python-artifact",
+          "pythoneda-shared-artifact-shared",
+          "INDIRECT-pythoneda-shared-code-requests-events",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
-          "pythoneda-shared-artifact-application",
-          "INDIRECT-INDIRECT-pythoneda-shared-code-requests-events",
+          "pythoneda-sandbox-python-artifact",
+          "pythoneda-shared-artifact-shared",
+          "INDIRECT-pythoneda-shared-code-requests-events",
           "pythoneda-shared-pythoneda-domain"
         ]
       },
@@ -1667,25 +1747,21 @@
     "pythoneda-shared-artifact-changes-shared_10": {
       "inputs": {
         "flake-utils": [
-          "rydnr-sandbox-artifact",
           "pythoneda-shared-artifact-shared",
           "INDIRECT-pythoneda-shared-code-requests-events",
           "flake-utils"
         ],
         "nixos": [
-          "rydnr-sandbox-artifact",
           "pythoneda-shared-artifact-shared",
           "INDIRECT-pythoneda-shared-code-requests-events",
           "nixos"
         ],
         "pythoneda-shared-pythoneda-banner": [
-          "rydnr-sandbox-artifact",
           "pythoneda-shared-artifact-shared",
           "INDIRECT-pythoneda-shared-code-requests-events",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
-          "rydnr-sandbox-artifact",
           "pythoneda-shared-artifact-shared",
           "INDIRECT-pythoneda-shared-code-requests-events",
           "pythoneda-shared-pythoneda-domain"
@@ -1711,25 +1787,21 @@
     "pythoneda-shared-artifact-changes-shared_11": {
       "inputs": {
         "flake-utils": [
-          "rydnr-sandbox-artifact",
           "pythoneda-shared-artifact-shared",
           "pythoneda-shared-artifact-changes-events",
           "flake-utils"
         ],
         "nixos": [
-          "rydnr-sandbox-artifact",
           "pythoneda-shared-artifact-shared",
           "pythoneda-shared-artifact-changes-events",
           "nixos"
         ],
         "pythoneda-shared-pythoneda-banner": [
-          "rydnr-sandbox-artifact",
           "pythoneda-shared-artifact-shared",
           "pythoneda-shared-artifact-changes-events",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
-          "rydnr-sandbox-artifact",
           "pythoneda-shared-artifact-shared",
           "pythoneda-shared-artifact-changes-events",
           "pythoneda-shared-pythoneda-domain"
@@ -1755,23 +1827,27 @@
     "pythoneda-shared-artifact-changes-shared_12": {
       "inputs": {
         "flake-utils": [
-          "rydnr-sandbox-artifact-infrastructure",
-          "INDIRECT-INDIRECT-pythoneda-shared-code-requests-events",
+          "pythoneda-shared-pythoneda-application",
+          "pythoneda-shared-artifact-shared",
+          "INDIRECT-pythoneda-shared-code-requests-events",
           "flake-utils"
         ],
         "nixos": [
-          "rydnr-sandbox-artifact-infrastructure",
-          "INDIRECT-INDIRECT-pythoneda-shared-code-requests-events",
+          "pythoneda-shared-pythoneda-application",
+          "pythoneda-shared-artifact-shared",
+          "INDIRECT-pythoneda-shared-code-requests-events",
           "nixos"
         ],
         "pythoneda-shared-pythoneda-banner": [
-          "rydnr-sandbox-artifact-infrastructure",
-          "INDIRECT-INDIRECT-pythoneda-shared-code-requests-events",
+          "pythoneda-shared-pythoneda-application",
+          "pythoneda-shared-artifact-shared",
+          "INDIRECT-pythoneda-shared-code-requests-events",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
-          "rydnr-sandbox-artifact-infrastructure",
-          "INDIRECT-INDIRECT-pythoneda-shared-code-requests-events",
+          "pythoneda-shared-pythoneda-application",
+          "pythoneda-shared-artifact-shared",
+          "INDIRECT-pythoneda-shared-code-requests-events",
           "pythoneda-shared-pythoneda-domain"
         ]
       },
@@ -1795,23 +1871,27 @@
     "pythoneda-shared-artifact-changes-shared_13": {
       "inputs": {
         "flake-utils": [
-          "rydnr-sandbox-artifact-infrastructure",
-          "INDIRECT-pythoneda-shared-artifact-changes-events",
+          "pythoneda-shared-pythoneda-application",
+          "pythoneda-shared-artifact-shared",
+          "pythoneda-shared-artifact-changes-events",
           "flake-utils"
         ],
         "nixos": [
-          "rydnr-sandbox-artifact-infrastructure",
-          "INDIRECT-pythoneda-shared-artifact-changes-events",
+          "pythoneda-shared-pythoneda-application",
+          "pythoneda-shared-artifact-shared",
+          "pythoneda-shared-artifact-changes-events",
           "nixos"
         ],
         "pythoneda-shared-pythoneda-banner": [
-          "rydnr-sandbox-artifact-infrastructure",
-          "INDIRECT-pythoneda-shared-artifact-changes-events",
+          "pythoneda-shared-pythoneda-application",
+          "pythoneda-shared-artifact-shared",
+          "pythoneda-shared-artifact-changes-events",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
-          "rydnr-sandbox-artifact-infrastructure",
-          "INDIRECT-pythoneda-shared-artifact-changes-events",
+          "pythoneda-shared-pythoneda-application",
+          "pythoneda-shared-artifact-shared",
+          "pythoneda-shared-artifact-changes-events",
           "pythoneda-shared-pythoneda-domain"
         ]
       },
@@ -1835,23 +1915,27 @@
     "pythoneda-shared-artifact-changes-shared_2": {
       "inputs": {
         "flake-utils": [
-          "pythoneda-shared-artifact-application",
-          "INDIRECT-pythoneda-shared-artifact-changes-events",
+          "pythoneda-sandbox-python-artifact",
+          "pythoneda-shared-artifact-shared",
+          "pythoneda-shared-artifact-changes-events",
           "flake-utils"
         ],
         "nixos": [
-          "pythoneda-shared-artifact-application",
-          "INDIRECT-pythoneda-shared-artifact-changes-events",
+          "pythoneda-sandbox-python-artifact",
+          "pythoneda-shared-artifact-shared",
+          "pythoneda-shared-artifact-changes-events",
           "nixos"
         ],
         "pythoneda-shared-pythoneda-banner": [
-          "pythoneda-shared-artifact-application",
-          "INDIRECT-pythoneda-shared-artifact-changes-events",
+          "pythoneda-sandbox-python-artifact",
+          "pythoneda-shared-artifact-shared",
+          "pythoneda-shared-artifact-changes-events",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
-          "pythoneda-shared-artifact-application",
-          "INDIRECT-pythoneda-shared-artifact-changes-events",
+          "pythoneda-sandbox-python-artifact",
+          "pythoneda-shared-artifact-shared",
+          "pythoneda-shared-artifact-changes-events",
           "pythoneda-shared-pythoneda-domain"
         ]
       },
@@ -1875,22 +1959,22 @@
     "pythoneda-shared-artifact-changes-shared_3": {
       "inputs": {
         "flake-utils": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-sandbox-python-artifact-infrastructure",
           "INDIRECT-INDIRECT-pythoneda-shared-code-requests-events",
           "flake-utils"
         ],
         "nixos": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-sandbox-python-artifact-infrastructure",
           "INDIRECT-INDIRECT-pythoneda-shared-code-requests-events",
           "nixos"
         ],
         "pythoneda-shared-pythoneda-banner": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-sandbox-python-artifact-infrastructure",
           "INDIRECT-INDIRECT-pythoneda-shared-code-requests-events",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-sandbox-python-artifact-infrastructure",
           "INDIRECT-INDIRECT-pythoneda-shared-code-requests-events",
           "pythoneda-shared-pythoneda-domain"
         ]
@@ -1915,22 +1999,22 @@
     "pythoneda-shared-artifact-changes-shared_4": {
       "inputs": {
         "flake-utils": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-sandbox-python-artifact-infrastructure",
           "INDIRECT-pythoneda-shared-artifact-changes-events",
           "flake-utils"
         ],
         "nixos": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-sandbox-python-artifact-infrastructure",
           "INDIRECT-pythoneda-shared-artifact-changes-events",
           "nixos"
         ],
         "pythoneda-shared-pythoneda-banner": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-sandbox-python-artifact-infrastructure",
           "INDIRECT-pythoneda-shared-artifact-changes-events",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-sandbox-python-artifact-infrastructure",
           "INDIRECT-pythoneda-shared-artifact-changes-events",
           "pythoneda-shared-pythoneda-domain"
         ]
@@ -1955,27 +2039,23 @@
     "pythoneda-shared-artifact-changes-shared_5": {
       "inputs": {
         "flake-utils": [
-          "pythoneda-shared-artifact-infrastructure",
-          "pythoneda-shared-artifact-shared",
-          "INDIRECT-pythoneda-shared-code-requests-events",
+          "pythoneda-shared-artifact-application",
+          "INDIRECT-INDIRECT-pythoneda-shared-code-requests-events",
           "flake-utils"
         ],
         "nixos": [
-          "pythoneda-shared-artifact-infrastructure",
-          "pythoneda-shared-artifact-shared",
-          "INDIRECT-pythoneda-shared-code-requests-events",
+          "pythoneda-shared-artifact-application",
+          "INDIRECT-INDIRECT-pythoneda-shared-code-requests-events",
           "nixos"
         ],
         "pythoneda-shared-pythoneda-banner": [
-          "pythoneda-shared-artifact-infrastructure",
-          "pythoneda-shared-artifact-shared",
-          "INDIRECT-pythoneda-shared-code-requests-events",
+          "pythoneda-shared-artifact-application",
+          "INDIRECT-INDIRECT-pythoneda-shared-code-requests-events",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
-          "pythoneda-shared-artifact-infrastructure",
-          "pythoneda-shared-artifact-shared",
-          "INDIRECT-pythoneda-shared-code-requests-events",
+          "pythoneda-shared-artifact-application",
+          "INDIRECT-INDIRECT-pythoneda-shared-code-requests-events",
           "pythoneda-shared-pythoneda-domain"
         ]
       },
@@ -1999,23 +2079,23 @@
     "pythoneda-shared-artifact-changes-shared_6": {
       "inputs": {
         "flake-utils": [
-          "pythoneda-shared-artifact-shared",
-          "INDIRECT-pythoneda-shared-code-requests-events",
+          "pythoneda-shared-artifact-application",
+          "INDIRECT-pythoneda-shared-artifact-changes-events",
           "flake-utils"
         ],
         "nixos": [
-          "pythoneda-shared-artifact-shared",
-          "INDIRECT-pythoneda-shared-code-requests-events",
+          "pythoneda-shared-artifact-application",
+          "INDIRECT-pythoneda-shared-artifact-changes-events",
           "nixos"
         ],
         "pythoneda-shared-pythoneda-banner": [
-          "pythoneda-shared-artifact-shared",
-          "INDIRECT-pythoneda-shared-code-requests-events",
+          "pythoneda-shared-artifact-application",
+          "INDIRECT-pythoneda-shared-artifact-changes-events",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
-          "pythoneda-shared-artifact-shared",
-          "INDIRECT-pythoneda-shared-code-requests-events",
+          "pythoneda-shared-artifact-application",
+          "INDIRECT-pythoneda-shared-artifact-changes-events",
           "pythoneda-shared-pythoneda-domain"
         ]
       },
@@ -2039,23 +2119,23 @@
     "pythoneda-shared-artifact-changes-shared_7": {
       "inputs": {
         "flake-utils": [
-          "pythoneda-shared-artifact-shared",
-          "pythoneda-shared-artifact-changes-events",
+          "pythoneda-shared-artifact-infrastructure",
+          "INDIRECT-INDIRECT-pythoneda-shared-code-requests-events",
           "flake-utils"
         ],
         "nixos": [
-          "pythoneda-shared-artifact-shared",
-          "pythoneda-shared-artifact-changes-events",
+          "pythoneda-shared-artifact-infrastructure",
+          "INDIRECT-INDIRECT-pythoneda-shared-code-requests-events",
           "nixos"
         ],
         "pythoneda-shared-pythoneda-banner": [
-          "pythoneda-shared-artifact-shared",
-          "pythoneda-shared-artifact-changes-events",
+          "pythoneda-shared-artifact-infrastructure",
+          "INDIRECT-INDIRECT-pythoneda-shared-code-requests-events",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
-          "pythoneda-shared-artifact-shared",
-          "pythoneda-shared-artifact-changes-events",
+          "pythoneda-shared-artifact-infrastructure",
+          "INDIRECT-INDIRECT-pythoneda-shared-code-requests-events",
           "pythoneda-shared-pythoneda-domain"
         ]
       },
@@ -2079,27 +2159,23 @@
     "pythoneda-shared-artifact-changes-shared_8": {
       "inputs": {
         "flake-utils": [
-          "pythoneda-shared-pythoneda-application",
-          "pythoneda-shared-artifact-shared",
-          "INDIRECT-pythoneda-shared-code-requests-events",
+          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-shared-artifact-changes-events",
           "flake-utils"
         ],
         "nixos": [
-          "pythoneda-shared-pythoneda-application",
-          "pythoneda-shared-artifact-shared",
-          "INDIRECT-pythoneda-shared-code-requests-events",
+          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-shared-artifact-changes-events",
           "nixos"
         ],
         "pythoneda-shared-pythoneda-banner": [
-          "pythoneda-shared-pythoneda-application",
-          "pythoneda-shared-artifact-shared",
-          "INDIRECT-pythoneda-shared-code-requests-events",
+          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-shared-artifact-changes-events",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
-          "pythoneda-shared-pythoneda-application",
-          "pythoneda-shared-artifact-shared",
-          "INDIRECT-pythoneda-shared-code-requests-events",
+          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-shared-artifact-changes-events",
           "pythoneda-shared-pythoneda-domain"
         ]
       },
@@ -2123,27 +2199,27 @@
     "pythoneda-shared-artifact-changes-shared_9": {
       "inputs": {
         "flake-utils": [
-          "pythoneda-shared-pythoneda-application",
+          "pythoneda-shared-artifact-infrastructure",
           "pythoneda-shared-artifact-shared",
-          "pythoneda-shared-artifact-changes-events",
+          "INDIRECT-pythoneda-shared-code-requests-events",
           "flake-utils"
         ],
         "nixos": [
-          "pythoneda-shared-pythoneda-application",
+          "pythoneda-shared-artifact-infrastructure",
           "pythoneda-shared-artifact-shared",
-          "pythoneda-shared-artifact-changes-events",
+          "INDIRECT-pythoneda-shared-code-requests-events",
           "nixos"
         ],
         "pythoneda-shared-pythoneda-banner": [
-          "pythoneda-shared-pythoneda-application",
+          "pythoneda-shared-artifact-infrastructure",
           "pythoneda-shared-artifact-shared",
-          "pythoneda-shared-artifact-changes-events",
+          "INDIRECT-pythoneda-shared-code-requests-events",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
-          "pythoneda-shared-pythoneda-application",
+          "pythoneda-shared-artifact-infrastructure",
           "pythoneda-shared-artifact-shared",
-          "pythoneda-shared-artifact-changes-events",
+          "INDIRECT-pythoneda-shared-code-requests-events",
           "pythoneda-shared-pythoneda-domain"
         ]
       },
@@ -2166,41 +2242,41 @@
     },
     "pythoneda-shared-artifact-infrastructure": {
       "inputs": {
-        "INDIRECT-INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-git-shared": "INDIRECT-INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-git-shared_2",
-        "INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared": "INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared_2",
-        "INDIRECT-INDIRECT-pythoneda-shared-code-requests-events": "INDIRECT-INDIRECT-pythoneda-shared-code-requests-events_2",
-        "INDIRECT-INDIRECT-pythoneda-shared-code-requests-shared": "INDIRECT-INDIRECT-pythoneda-shared-code-requests-shared_2",
-        "INDIRECT-pythoneda-shared-artifact-changes-events": "INDIRECT-pythoneda-shared-artifact-changes-events_2",
-        "INDIRECT-pythoneda-shared-code-requests-jupyterlab": "INDIRECT-pythoneda-shared-code-requests-jupyterlab_2",
+        "INDIRECT-INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-git-shared": "INDIRECT-INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-git-shared_3",
+        "INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared": "INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared_3",
+        "INDIRECT-INDIRECT-pythoneda-shared-code-requests-events": "INDIRECT-INDIRECT-pythoneda-shared-code-requests-events_3",
+        "INDIRECT-INDIRECT-pythoneda-shared-code-requests-shared": "INDIRECT-INDIRECT-pythoneda-shared-code-requests-shared_3",
+        "INDIRECT-pythoneda-shared-code-requests-jupyterlab": "INDIRECT-pythoneda-shared-code-requests-jupyterlab_3",
         "flake-utils": [
           "flake-utils"
         ],
         "nixos": [
           "nixos"
         ],
-        "pythoneda-shared-artifact-changes-events-infrastructure": "pythoneda-shared-artifact-changes-events-infrastructure",
-        "pythoneda-shared-artifact-shared": "pythoneda-shared-artifact-shared",
+        "pythoneda-shared-artifact-changes-events": "pythoneda-shared-artifact-changes-events_2",
+        "pythoneda-shared-artifact-changes-events-infrastructure": "pythoneda-shared-artifact-changes-events-infrastructure_2",
+        "pythoneda-shared-artifact-shared": "pythoneda-shared-artifact-shared_2",
         "pythoneda-shared-pythoneda-banner": [
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
           "pythoneda-shared-pythoneda-domain"
         ],
-        "pythoneda-shared-pythoneda-infrastructure": "pythoneda-shared-pythoneda-infrastructure"
+        "pythoneda-shared-pythoneda-infrastructure": "pythoneda-shared-pythoneda-infrastructure_2"
       },
       "locked": {
         "dir": "infrastructure",
-        "lastModified": 1698834522,
-        "narHash": "sha256-PHFvf+BZ0rI/Zm7Ps4ApyLSvSLv4H/abeAPMPkXPZ/E=",
+        "lastModified": 1699171507,
+        "narHash": "sha256-gYGIxtk4Xe7CjzE/KJlRDrEmPQ0jQSZVryRJwlo4LkQ=",
         "owner": "pythoneda-shared-artifact",
         "repo": "infrastructure-artifact",
-        "rev": "fdf386a6f98c842d16cf4f7aa0a39974a84b83b3",
+        "rev": "13210411b68be203e431db2c48ab2a6b3a7f7205",
         "type": "github"
       },
       "original": {
         "dir": "infrastructure",
         "owner": "pythoneda-shared-artifact",
-        "ref": "0.0.2",
+        "ref": "0.0.4",
         "repo": "infrastructure-artifact",
         "type": "github"
       }
@@ -2211,6 +2287,44 @@
         "INDIRECT-pythoneda-shared-code-requests-events": "INDIRECT-pythoneda-shared-code-requests-events",
         "INDIRECT-pythoneda-shared-code-requests-shared": "INDIRECT-pythoneda-shared-code-requests-shared",
         "flake-utils": [
+          "pythoneda-sandbox-python-artifact",
+          "flake-utils"
+        ],
+        "nixos": [
+          "pythoneda-sandbox-python-artifact",
+          "nixos"
+        ],
+        "pythoneda-shared-artifact-changes-events": "pythoneda-shared-artifact-changes-events",
+        "pythoneda-shared-git-shared": "pythoneda-shared-git-shared",
+        "pythoneda-shared-pythoneda-banner": [
+          "pythoneda-sandbox-python-artifact",
+          "pythoneda-shared-pythoneda-banner"
+        ],
+        "pythoneda-shared-pythoneda-domain": "pythoneda-shared-pythoneda-domain"
+      },
+      "locked": {
+        "dir": "shared",
+        "lastModified": 1698255695,
+        "narHash": "sha256-b0CqaXG9+E2gDUQoA25/hszP4wQnjfSZKJUiPFAVAQ8=",
+        "owner": "pythoneda-shared-artifact",
+        "repo": "shared-artifact",
+        "rev": "bce2dae23141d6c05e0c4c35dbe78fdb0f492297",
+        "type": "github"
+      },
+      "original": {
+        "dir": "shared",
+        "owner": "pythoneda-shared-artifact",
+        "ref": "0.0.1",
+        "repo": "shared-artifact",
+        "type": "github"
+      }
+    },
+    "pythoneda-shared-artifact-shared_2": {
+      "inputs": {
+        "INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared": "INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared_2",
+        "INDIRECT-pythoneda-shared-code-requests-events": "INDIRECT-pythoneda-shared-code-requests-events_2",
+        "INDIRECT-pythoneda-shared-code-requests-shared": "INDIRECT-pythoneda-shared-code-requests-shared_2",
+        "flake-utils": [
           "pythoneda-shared-artifact-infrastructure",
           "flake-utils"
         ],
@@ -2220,7 +2334,7 @@
         ],
         "pythoneda-shared-artifact-changes-events": [
           "pythoneda-shared-artifact-infrastructure",
-          "INDIRECT-pythoneda-shared-artifact-changes-events"
+          "pythoneda-shared-artifact-changes-events"
         ],
         "pythoneda-shared-git-shared": [
           "pythoneda-shared-artifact-infrastructure",
@@ -2252,64 +2366,23 @@
         "type": "github"
       }
     },
-    "pythoneda-shared-artifact-shared_2": {
-      "inputs": {
-        "INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared": "INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared_2",
-        "INDIRECT-pythoneda-shared-code-requests-events": "INDIRECT-pythoneda-shared-code-requests-events_2",
-        "INDIRECT-pythoneda-shared-code-requests-shared": "INDIRECT-pythoneda-shared-code-requests-shared_2",
-        "flake-utils": [
-          "flake-utils"
-        ],
-        "nixos": [
-          "nixos"
-        ],
-        "pythoneda-shared-artifact-changes-events": "pythoneda-shared-artifact-changes-events",
-        "pythoneda-shared-git-shared": "pythoneda-shared-git-shared",
-        "pythoneda-shared-pythoneda-banner": [
-          "pythoneda-shared-pythoneda-banner"
-        ],
-        "pythoneda-shared-pythoneda-domain": [
-          "pythoneda-shared-pythoneda-domain"
-        ]
-      },
-      "locked": {
-        "dir": "shared",
-        "lastModified": 1698255695,
-        "narHash": "sha256-b0CqaXG9+E2gDUQoA25/hszP4wQnjfSZKJUiPFAVAQ8=",
-        "owner": "pythoneda-shared-artifact",
-        "repo": "shared-artifact",
-        "rev": "bce2dae23141d6c05e0c4c35dbe78fdb0f492297",
-        "type": "github"
-      },
-      "original": {
-        "dir": "shared",
-        "owner": "pythoneda-shared-artifact",
-        "ref": "0.0.1",
-        "repo": "shared-artifact",
-        "type": "github"
-      }
-    },
     "pythoneda-shared-artifact-shared_3": {
       "inputs": {
         "INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared": "INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared_3",
         "INDIRECT-pythoneda-shared-code-requests-events": "INDIRECT-pythoneda-shared-code-requests-events_3",
         "INDIRECT-pythoneda-shared-code-requests-shared": "INDIRECT-pythoneda-shared-code-requests-shared_3",
         "flake-utils": [
-          "pythoneda-shared-pythoneda-application",
           "flake-utils"
         ],
         "nixos": [
-          "pythoneda-shared-pythoneda-application",
           "nixos"
         ],
-        "pythoneda-shared-artifact-changes-events": "pythoneda-shared-artifact-changes-events_2",
+        "pythoneda-shared-artifact-changes-events": "pythoneda-shared-artifact-changes-events_3",
         "pythoneda-shared-git-shared": "pythoneda-shared-git-shared_2",
         "pythoneda-shared-pythoneda-banner": [
-          "pythoneda-shared-pythoneda-application",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
-          "pythoneda-shared-pythoneda-application",
           "pythoneda-shared-pythoneda-domain"
         ]
       },
@@ -2336,20 +2409,23 @@
         "INDIRECT-pythoneda-shared-code-requests-events": "INDIRECT-pythoneda-shared-code-requests-events_4",
         "INDIRECT-pythoneda-shared-code-requests-shared": "INDIRECT-pythoneda-shared-code-requests-shared_4",
         "flake-utils": [
-          "rydnr-sandbox-artifact",
+          "pythoneda-shared-pythoneda-application",
           "flake-utils"
         ],
         "nixos": [
-          "rydnr-sandbox-artifact",
+          "pythoneda-shared-pythoneda-application",
           "nixos"
         ],
-        "pythoneda-shared-artifact-changes-events": "pythoneda-shared-artifact-changes-events_3",
+        "pythoneda-shared-artifact-changes-events": "pythoneda-shared-artifact-changes-events_4",
         "pythoneda-shared-git-shared": "pythoneda-shared-git-shared_3",
         "pythoneda-shared-pythoneda-banner": [
-          "rydnr-sandbox-artifact",
+          "pythoneda-shared-pythoneda-application",
           "pythoneda-shared-pythoneda-banner"
         ],
-        "pythoneda-shared-pythoneda-domain": "pythoneda-shared-pythoneda-domain_2"
+        "pythoneda-shared-pythoneda-domain": [
+          "pythoneda-shared-pythoneda-application",
+          "pythoneda-shared-pythoneda-domain"
+        ]
       },
       "locked": {
         "dir": "shared",
@@ -2371,18 +2447,22 @@
     "pythoneda-shared-git-shared": {
       "inputs": {
         "flake-utils": [
+          "pythoneda-sandbox-python-artifact",
           "pythoneda-shared-artifact-shared",
           "flake-utils"
         ],
         "nixos": [
+          "pythoneda-sandbox-python-artifact",
           "pythoneda-shared-artifact-shared",
           "nixos"
         ],
         "pythoneda-shared-pythoneda-banner": [
+          "pythoneda-sandbox-python-artifact",
           "pythoneda-shared-artifact-shared",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
+          "pythoneda-sandbox-python-artifact",
           "pythoneda-shared-artifact-shared",
           "pythoneda-shared-pythoneda-domain"
         ]
@@ -2407,22 +2487,18 @@
     "pythoneda-shared-git-shared_2": {
       "inputs": {
         "flake-utils": [
-          "pythoneda-shared-pythoneda-application",
           "pythoneda-shared-artifact-shared",
           "flake-utils"
         ],
         "nixos": [
-          "pythoneda-shared-pythoneda-application",
           "pythoneda-shared-artifact-shared",
           "nixos"
         ],
         "pythoneda-shared-pythoneda-banner": [
-          "pythoneda-shared-pythoneda-application",
           "pythoneda-shared-artifact-shared",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
-          "pythoneda-shared-pythoneda-application",
           "pythoneda-shared-artifact-shared",
           "pythoneda-shared-pythoneda-domain"
         ]
@@ -2447,22 +2523,22 @@
     "pythoneda-shared-git-shared_3": {
       "inputs": {
         "flake-utils": [
-          "rydnr-sandbox-artifact",
+          "pythoneda-shared-pythoneda-application",
           "pythoneda-shared-artifact-shared",
           "flake-utils"
         ],
         "nixos": [
-          "rydnr-sandbox-artifact",
+          "pythoneda-shared-pythoneda-application",
           "pythoneda-shared-artifact-shared",
           "nixos"
         ],
         "pythoneda-shared-pythoneda-banner": [
-          "rydnr-sandbox-artifact",
+          "pythoneda-shared-pythoneda-application",
           "pythoneda-shared-artifact-shared",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
-          "rydnr-sandbox-artifact",
+          "pythoneda-shared-pythoneda-application",
           "pythoneda-shared-artifact-shared",
           "pythoneda-shared-pythoneda-domain"
         ]
@@ -2492,7 +2568,7 @@
         "nixos": [
           "nixos"
         ],
-        "pythoneda-shared-artifact-shared": "pythoneda-shared-artifact-shared_3",
+        "pythoneda-shared-artifact-shared": "pythoneda-shared-artifact-shared_4",
         "pythoneda-shared-pythoneda-banner": [
           "pythoneda-shared-pythoneda-banner"
         ],
@@ -2547,12 +2623,18 @@
     "pythoneda-shared-pythoneda-domain": {
       "inputs": {
         "flake-utils": [
+          "pythoneda-sandbox-python-artifact",
+          "pythoneda-shared-artifact-shared",
           "flake-utils"
         ],
         "nixos": [
+          "pythoneda-sandbox-python-artifact",
+          "pythoneda-shared-artifact-shared",
           "nixos"
         ],
         "pythoneda-shared-pythoneda-banner": [
+          "pythoneda-sandbox-python-artifact",
+          "pythoneda-shared-artifact-shared",
           "pythoneda-shared-pythoneda-banner"
         ]
       },
@@ -2576,18 +2658,12 @@
     "pythoneda-shared-pythoneda-domain_2": {
       "inputs": {
         "flake-utils": [
-          "rydnr-sandbox-artifact",
-          "pythoneda-shared-artifact-shared",
           "flake-utils"
         ],
         "nixos": [
-          "rydnr-sandbox-artifact",
-          "pythoneda-shared-artifact-shared",
           "nixos"
         ],
         "pythoneda-shared-pythoneda-banner": [
-          "rydnr-sandbox-artifact",
-          "pythoneda-shared-artifact-shared",
           "pythoneda-shared-pythoneda-banner"
         ]
       },
@@ -2611,19 +2687,19 @@
     "pythoneda-shared-pythoneda-infrastructure": {
       "inputs": {
         "flake-utils": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-sandbox-python-artifact-infrastructure",
           "flake-utils"
         ],
         "nixos": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-sandbox-python-artifact-infrastructure",
           "nixos"
         ],
         "pythoneda-shared-pythoneda-banner": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-sandbox-python-artifact-infrastructure",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-sandbox-python-artifact-infrastructure",
           "pythoneda-shared-pythoneda-domain"
         ]
       },
@@ -2647,15 +2723,19 @@
     "pythoneda-shared-pythoneda-infrastructure_2": {
       "inputs": {
         "flake-utils": [
+          "pythoneda-shared-artifact-infrastructure",
           "flake-utils"
         ],
         "nixos": [
+          "pythoneda-shared-artifact-infrastructure",
           "nixos"
         ],
         "pythoneda-shared-pythoneda-banner": [
+          "pythoneda-shared-artifact-infrastructure",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
+          "pythoneda-shared-artifact-infrastructure",
           "pythoneda-shared-pythoneda-domain"
         ]
       },
@@ -2679,19 +2759,15 @@
     "pythoneda-shared-pythoneda-infrastructure_3": {
       "inputs": {
         "flake-utils": [
-          "rydnr-sandbox-artifact-infrastructure",
           "flake-utils"
         ],
         "nixos": [
-          "rydnr-sandbox-artifact-infrastructure",
           "nixos"
         ],
         "pythoneda-shared-pythoneda-banner": [
-          "rydnr-sandbox-artifact-infrastructure",
           "pythoneda-shared-pythoneda-banner"
         ],
         "pythoneda-shared-pythoneda-domain": [
-          "rydnr-sandbox-artifact-infrastructure",
           "pythoneda-shared-pythoneda-domain"
         ]
       },
@@ -2716,103 +2792,29 @@
       "inputs": {
         "flake-utils": "flake-utils",
         "nixos": "nixos",
+        "pythoneda-sandbox-python-artifact": "pythoneda-sandbox-python-artifact",
+        "pythoneda-sandbox-python-artifact-infrastructure": "pythoneda-sandbox-python-artifact-infrastructure",
         "pythoneda-shared-artifact-application": "pythoneda-shared-artifact-application",
         "pythoneda-shared-artifact-infrastructure": "pythoneda-shared-artifact-infrastructure",
-        "pythoneda-shared-artifact-shared": "pythoneda-shared-artifact-shared_2",
+        "pythoneda-shared-artifact-shared": "pythoneda-shared-artifact-shared_3",
         "pythoneda-shared-pythoneda-application": "pythoneda-shared-pythoneda-application",
         "pythoneda-shared-pythoneda-banner": "pythoneda-shared-pythoneda-banner",
-        "pythoneda-shared-pythoneda-domain": "pythoneda-shared-pythoneda-domain",
-        "pythoneda-shared-pythoneda-infrastructure": "pythoneda-shared-pythoneda-infrastructure_2",
-        "rydnr-sandbox-artifact": "rydnr-sandbox-artifact",
-        "rydnr-sandbox-artifact-infrastructure": "rydnr-sandbox-artifact-infrastructure"
-      }
-    },
-    "rydnr-sandbox-artifact": {
-      "inputs": {
-        "flake-utils": [
-          "flake-utils"
-        ],
-        "nixos": [
-          "nixos"
-        ],
-        "pythoneda-shared-artifact-shared": "pythoneda-shared-artifact-shared_4",
-        "pythoneda-shared-pythoneda-banner": [
-          "pythoneda-shared-pythoneda-banner"
-        ],
-        "pythoneda-shared-pythoneda-domain": [
-          "pythoneda-shared-pythoneda-domain"
-        ]
-      },
-      "locked": {
-        "dir": "sandbox-artifact",
-        "lastModified": 1698834229,
-        "narHash": "sha256-Usm5/pMCzjkpisPJxw3nGC3owIutfqVZjD6HpAzg++M=",
-        "owner": "rydnr",
-        "repo": "sandbox-artifact-artifact",
-        "rev": "dce5ad6a6652a79e10537cd1ef86e7ad147a8d74",
-        "type": "github"
-      },
-      "original": {
-        "dir": "sandbox-artifact",
-        "owner": "rydnr",
-        "ref": "0.0.1",
-        "repo": "sandbox-artifact-artifact",
-        "type": "github"
-      }
-    },
-    "rydnr-sandbox-artifact-infrastructure": {
-      "inputs": {
-        "INDIRECT-INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-git-shared": "INDIRECT-INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-git-shared_3",
-        "INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared": "INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared_3",
-        "INDIRECT-INDIRECT-pythoneda-shared-code-requests-events": "INDIRECT-INDIRECT-pythoneda-shared-code-requests-events_3",
-        "INDIRECT-INDIRECT-pythoneda-shared-code-requests-shared": "INDIRECT-INDIRECT-pythoneda-shared-code-requests-shared_3",
-        "INDIRECT-pythoneda-shared-artifact-changes-events": "INDIRECT-pythoneda-shared-artifact-changes-events_3",
-        "INDIRECT-pythoneda-shared-code-requests-jupyterlab": "INDIRECT-pythoneda-shared-code-requests-jupyterlab_3",
-        "flake-utils": [
-          "flake-utils"
-        ],
-        "nixos": [
-          "nixos"
-        ],
-        "pythoneda-shared-artifact-changes-events-infrastructure": "pythoneda-shared-artifact-changes-events-infrastructure_2",
-        "pythoneda-shared-pythoneda-banner": [
-          "pythoneda-shared-pythoneda-banner"
-        ],
-        "pythoneda-shared-pythoneda-domain": [
-          "pythoneda-shared-pythoneda-domain"
-        ],
-        "pythoneda-shared-pythoneda-infrastructure": "pythoneda-shared-pythoneda-infrastructure_3",
-        "rydnr-sandbox-artifact": [
-          "rydnr-sandbox-artifact"
-        ]
-      },
-      "locked": {
-        "dir": "sandbox-artifact-infrastructure",
-        "lastModified": 1699014075,
-        "narHash": "sha256-gadirB7R6tvK7Jnh6/4bw1BSiTBcP+YtkfUL6KEpCfM=",
-        "owner": "rydnr",
-        "repo": "sandbox-artifact-infrastructure-artifact",
-        "rev": "1be376f4b8e2d11fe4b395bb764655e1217ee084",
-        "type": "github"
-      },
-      "original": {
-        "dir": "sandbox-artifact-infrastructure",
-        "owner": "rydnr",
-        "ref": "0.0.1",
-        "repo": "sandbox-artifact-infrastructure-artifact",
-        "type": "github"
+        "pythoneda-shared-pythoneda-domain": "pythoneda-shared-pythoneda-domain_2",
+        "pythoneda-shared-pythoneda-infrastructure": "pythoneda-shared-pythoneda-infrastructure_3"
       }
     },
     "stringtemplate3": {
       "inputs": {
         "flake-utils": [
-          "pythoneda-shared-artifact-application",
-          "INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared",
+          "pythoneda-sandbox-python-artifact",
+          "pythoneda-shared-artifact-shared",
+          "INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared",
           "flake-utils"
         ],
         "nixos": [
-          "pythoneda-shared-artifact-application",
-          "INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared",
+          "pythoneda-sandbox-python-artifact",
+          "pythoneda-shared-artifact-shared",
+          "INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared",
           "nixos"
         ]
       },
@@ -2836,12 +2838,12 @@
     "stringtemplate3_2": {
       "inputs": {
         "flake-utils": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-sandbox-python-artifact-infrastructure",
           "INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared",
           "flake-utils"
         ],
         "nixos": [
-          "pythoneda-shared-artifact-infrastructure",
+          "pythoneda-sandbox-python-artifact-infrastructure",
           "INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared",
           "nixos"
         ]
@@ -2866,15 +2868,13 @@
     "stringtemplate3_3": {
       "inputs": {
         "flake-utils": [
-          "pythoneda-shared-artifact-infrastructure",
-          "pythoneda-shared-artifact-shared",
-          "INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared",
+          "pythoneda-shared-artifact-application",
+          "INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared",
           "flake-utils"
         ],
         "nixos": [
-          "pythoneda-shared-artifact-infrastructure",
-          "pythoneda-shared-artifact-shared",
-          "INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared",
+          "pythoneda-shared-artifact-application",
+          "INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared",
           "nixos"
         ]
       },
@@ -2898,13 +2898,13 @@
     "stringtemplate3_4": {
       "inputs": {
         "flake-utils": [
-          "pythoneda-shared-artifact-shared",
-          "INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared",
+          "pythoneda-shared-artifact-infrastructure",
+          "INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared",
           "flake-utils"
         ],
         "nixos": [
-          "pythoneda-shared-artifact-shared",
-          "INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared",
+          "pythoneda-shared-artifact-infrastructure",
+          "INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared",
           "nixos"
         ]
       },
@@ -2928,13 +2928,13 @@
     "stringtemplate3_5": {
       "inputs": {
         "flake-utils": [
-          "pythoneda-shared-pythoneda-application",
+          "pythoneda-shared-artifact-infrastructure",
           "pythoneda-shared-artifact-shared",
           "INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared",
           "flake-utils"
         ],
         "nixos": [
-          "pythoneda-shared-pythoneda-application",
+          "pythoneda-shared-artifact-infrastructure",
           "pythoneda-shared-artifact-shared",
           "INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared",
           "nixos"
@@ -2960,13 +2960,11 @@
     "stringtemplate3_6": {
       "inputs": {
         "flake-utils": [
-          "rydnr-sandbox-artifact",
           "pythoneda-shared-artifact-shared",
           "INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared",
           "flake-utils"
         ],
         "nixos": [
-          "rydnr-sandbox-artifact",
           "pythoneda-shared-artifact-shared",
           "INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared",
           "nixos"
@@ -2992,13 +2990,15 @@
     "stringtemplate3_7": {
       "inputs": {
         "flake-utils": [
-          "rydnr-sandbox-artifact-infrastructure",
-          "INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared",
+          "pythoneda-shared-pythoneda-application",
+          "pythoneda-shared-artifact-shared",
+          "INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared",
           "flake-utils"
         ],
         "nixos": [
-          "rydnr-sandbox-artifact-infrastructure",
-          "INDIRECT-INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared",
+          "pythoneda-shared-pythoneda-application",
+          "pythoneda-shared-artifact-shared",
+          "INDIRECT-INDIRECT-pythoneda-shared-nix-flake-shared",
           "nixos"
         ]
       },

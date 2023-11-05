@@ -1,8 +1,8 @@
-# domain-artifact-application/pyprojecttoml.template
+# python-artifact-application/pyprojecttoml.template
 #
-# This file is the template for pythoneda-shared-pythoneda/domain-artifact-application's pyproject.toml
+# This file is the template for pythoneda-sandbox/python-artifact-application's pyproject.toml
 #
-# Copyright (C) 2023-today rydnr's pythoneda-shared-pythoneda/domain-artifact-application-artifact
+# Copyright (C) 2023-today rydnr's pythoneda-sandbox/python-artifact-application-artifact
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -27,6 +27,8 @@ packages = [{include = "@package@"}]
 
 [tool.poetry.dependencies]
 python = "^@pythonMajorMinorVersion@"
+pythoneda-sandbox-python-artifact = "^@pythonedaSandboxPythonArtifact@"
+pythoneda-sandbox-python-artifact-infrastructure = "^@pythonedaSandboxPythonArtifactInfrastructure@"
 pythoneda-shared-artifact-application = "^@pythonedaSharedArtifactApplication@"
 pythoneda-shared-artifact-shared = "^@pythonedaSharedArtifactShared@"
 pythoneda-shared-artifact-infrastructure = "^@pythonedaSharedArtifactInfrastructure@"
@@ -34,8 +36,6 @@ pythoneda-shared-pythoneda-application = "^@pythonedaSharedPythonedaApplication@
 pythoneda-shared-pythoneda-banner = "^@pythonedaSharedPythonedaBanner@"
 pythoneda-shared-pythoneda-domain = "^@pythonedaSharedPythonedaDomain@"
 pythoneda-shared-pythoneda-infrastructure = "^@pythonedaSharedPythonedaInfrastructure@"
-rydnr-sandbox-artifact = "^@rydnrSandboxArtifact@"
-rydnr-sandbox-artifact-infrastructure = "^@rydnrSandboxArtifactInfrastructure@"
 
 [build-system]
 requires = ["poetry-core"]
