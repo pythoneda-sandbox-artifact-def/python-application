@@ -29,7 +29,7 @@
       inputs.pythoneda-shared-pythoneda-domain.follows =
         "pythoneda-shared-pythoneda-domain";
       url =
-        "github:pythoneda-sandbox/python-artifact-artifact/0.0.4?dir=python-artifact";
+        "github:pythoneda-sandbox/python-artifact-artifact/0.0.6?dir=python-artifact";
     };
     pythoneda-sandbox-python-artifact-infrastructure = {
       inputs.flake-utils.follows = "flake-utils";
@@ -41,7 +41,7 @@
       inputs.pythoneda-sandbox-python-artifact.follows =
         "pythoneda-sandbox-python-artifact";
       url =
-        "github:pythoneda-sandbox/python-artifact-infrastructure-artifact/0.0.5?dir=python-artifact-infrastructure";
+        "github:pythoneda-sandbox/python-artifact-infrastructure-artifact/0.0.6?dir=python-artifact-infrastructure";
     };
     pythoneda-shared-artifact-application = {
       inputs.flake-utils.follows = "flake-utils";
@@ -55,7 +55,7 @@
       inputs.pythoneda-shared-pythoneda-domain.follows =
         "pythoneda-shared-pythoneda-domain";
       url =
-        "github:pythoneda-shared-artifact/application-artifact/0.0.5?dir=application";
+        "github:pythoneda-shared-artifact/application-artifact/0.0.8?dir=application";
     };
     pythoneda-shared-artifact-infrastructure = {
       inputs.flake-utils.follows = "flake-utils";
@@ -65,7 +65,7 @@
       inputs.pythoneda-shared-pythoneda-domain.follows =
         "pythoneda-shared-pythoneda-domain";
       url =
-        "github:pythoneda-shared-artifact/infrastructure-artifact/0.0.6?dir=infrastructure";
+        "github:pythoneda-shared-artifact/infrastructure-artifact/0.0.10?dir=infrastructure";
     };
     pythoneda-shared-artifact-shared = {
       inputs.flake-utils.follows = "flake-utils";
@@ -74,7 +74,7 @@
         "pythoneda-shared-pythoneda-banner";
       inputs.pythoneda-shared-pythoneda-domain.follows =
         "pythoneda-shared-pythoneda-domain";
-      url = "github:pythoneda-shared-artifact/shared-artifact/0.0.4?dir=shared";
+      url = "github:pythoneda-shared-artifact/shared-artifact/0.0.9?dir=shared";
     };
     pythoneda-shared-pythoneda-application = {
       inputs.flake-utils.follows = "flake-utils";
@@ -86,12 +86,12 @@
       inputs.pythoneda-shared-pythoneda-infrastructure.follows =
         "pythoneda-shared-pythoneda-infrastructure";
       url =
-        "github:pythoneda-shared-pythoneda/application-artifact/0.0.8?dir=application";
+        "github:pythoneda-shared-pythoneda/application-artifact/0.0.18?dir=application";
     };
     pythoneda-shared-pythoneda-banner = {
       inputs.flake-utils.follows = "flake-utils";
       inputs.nixos.follows = "nixos";
-      url = "github:pythoneda-shared-pythoneda/banner/0.0.13";
+      url = "github:pythoneda-shared-pythoneda/banner/0.0.25";
     };
     pythoneda-shared-pythoneda-domain = {
       inputs.flake-utils.follows = "flake-utils";
@@ -99,7 +99,7 @@
       inputs.pythoneda-shared-pythoneda-banner.follows =
         "pythoneda-shared-pythoneda-banner";
       url =
-        "github:pythoneda-shared-pythoneda/domain-artifact/0.0.13?dir=domain";
+        "github:pythoneda-shared-pythoneda/domain-artifact/0.0.16?dir=domain";
     };
     pythoneda-shared-pythoneda-infrastructure = {
       inputs.flake-utils.follows = "flake-utils";
@@ -109,7 +109,7 @@
       inputs.pythoneda-shared-pythoneda-domain.follows =
         "pythoneda-shared-pythoneda-domain";
       url =
-        "github:pythoneda-shared-pythoneda/infrastructure-artifact/0.0.6?dir=infrastructure";
+        "github:pythoneda-shared-pythoneda/infrastructure-artifact/0.0.8?dir=infrastructure";
     };
   };
   outputs = inputs:
@@ -118,8 +118,8 @@
       let
         org = "pythoneda-sandbox";
         repo = "python-artifact-application";
-        version = "0.0.4";
-        sha256 = "12b47cinxhx5avhbz719fpzbfvv123p1zyjnyamq26r36a0r03mi";
+        version = "0.0.5";
+        sha256 = "1xyp9qyggc3wfws7klg430xn4f0nkrq9p4ys4y18rr38zclzcz6y";
         pname = "${org}-${repo}";
         pythonpackage = "pythoneda.sandbox.artifact.application";
         package = builtins.replaceStrings [ "." ] [ "/" ] pythonpackage;
