@@ -1,8 +1,8 @@
-# python-artifact-application/flake.nix
+# flake.nix
 #
-# This file packages pythoneda-sandbox/python-artifact-application as a Nix flake.
+# This file packages pythoneda-sandbox-artifact/python-application as a Nix flake.
 #
-# Copyright (C) 2023-today rydnr's pythoneda-sandbox/python-artifact-application-artifact
+# Copyright (C) 2023-today rydnr's pythoneda-sandbox-artifact-def/python-application
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -17,31 +17,29 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 {
-  description = "Application layer for pythoneda-sandbox/python-artifact";
+  description = "Application layer for pythoneda-sandbox-artifact/python";
   inputs = rec {
     flake-utils.url = "github:numtide/flake-utils/v1.0.0";
     nixos.url = "github:NixOS/nixpkgs/nixos-23.05";
-    pythoneda-sandbox-python-artifact = {
+    pythoneda-sandbox-artifact-python = {
       inputs.flake-utils.follows = "flake-utils";
       inputs.nixos.follows = "nixos";
       inputs.pythoneda-shared-pythoneda-banner.follows =
         "pythoneda-shared-pythoneda-banner";
       inputs.pythoneda-shared-pythoneda-domain.follows =
         "pythoneda-shared-pythoneda-domain";
-      url =
-        "github:pythoneda-sandbox/python-artifact-artifact/0.0.6?dir=python-artifact";
+      url = "github:pythoneda-sandbox-artifact-def/python/0.0.3";
     };
-    pythoneda-sandbox-python-artifact-infrastructure = {
+    pythoneda-sandbox-artifact-python-infrastructure = {
       inputs.flake-utils.follows = "flake-utils";
       inputs.nixos.follows = "nixos";
       inputs.pythoneda-shared-pythoneda-banner.follows =
         "pythoneda-shared-pythoneda-banner";
       inputs.pythoneda-shared-pythoneda-domain.follows =
         "pythoneda-shared-pythoneda-domain";
-      inputs.pythoneda-sandbox-python-artifact.follows =
-        "pythoneda-sandbox-python-artifact";
-      url =
-        "github:pythoneda-sandbox/python-artifact-infrastructure-artifact/0.0.6?dir=python-artifact-infrastructure";
+      inputs.pythoneda-sandbox-artifact-python.follows =
+        "pythoneda-sandbox-artifact-python";
+      url = "github:pythoneda-sandbox-artifact-def/python-infrastructure/0.0.8";
     };
     pythoneda-shared-artifact-application = {
       inputs.flake-utils.follows = "flake-utils";
@@ -54,8 +52,7 @@
         "pythoneda-shared-pythoneda-banner";
       inputs.pythoneda-shared-pythoneda-domain.follows =
         "pythoneda-shared-pythoneda-domain";
-      url =
-        "github:pythoneda-shared-artifact/application-artifact/0.0.8?dir=application";
+      url = "github:pythoneda-shared-artifact-def/application/0.0.9";
     };
     pythoneda-shared-artifact-infrastructure = {
       inputs.flake-utils.follows = "flake-utils";
@@ -64,8 +61,7 @@
         "pythoneda-shared-pythoneda-banner";
       inputs.pythoneda-shared-pythoneda-domain.follows =
         "pythoneda-shared-pythoneda-domain";
-      url =
-        "github:pythoneda-shared-artifact/infrastructure-artifact/0.0.10?dir=infrastructure";
+      url = "github:pythoneda-shared-artifact-def/infrastructure/0.0.11";
     };
     pythoneda-shared-artifact-shared = {
       inputs.flake-utils.follows = "flake-utils";
@@ -74,7 +70,7 @@
         "pythoneda-shared-pythoneda-banner";
       inputs.pythoneda-shared-pythoneda-domain.follows =
         "pythoneda-shared-pythoneda-domain";
-      url = "github:pythoneda-shared-artifact/shared-artifact/0.0.9?dir=shared";
+      url = "github:pythoneda-shared-artifact-def/shared/0.0.10";
     };
     pythoneda-shared-pythoneda-application = {
       inputs.flake-utils.follows = "flake-utils";
@@ -85,13 +81,12 @@
         "pythoneda-shared-pythoneda-domain";
       inputs.pythoneda-shared-pythoneda-infrastructure.follows =
         "pythoneda-shared-pythoneda-infrastructure";
-      url =
-        "github:pythoneda-shared-pythoneda/application-artifact/0.0.18?dir=application";
+      url = "github:pythoneda-shared-pythoneda-def/application/0.0.1";
     };
     pythoneda-shared-pythoneda-banner = {
       inputs.flake-utils.follows = "flake-utils";
       inputs.nixos.follows = "nixos";
-      url = "github:pythoneda-shared-pythoneda/banner/0.0.25";
+      url = "github:pythoneda-shared-pythoneda-def/banner/0.0.2";
     };
     pythoneda-shared-pythoneda-domain = {
       inputs.flake-utils.follows = "flake-utils";
@@ -108,8 +103,7 @@
         "pythoneda-shared-pythoneda-banner";
       inputs.pythoneda-shared-pythoneda-domain.follows =
         "pythoneda-shared-pythoneda-domain";
-      url =
-        "github:pythoneda-shared-pythoneda/infrastructure-artifact/0.0.8?dir=infrastructure";
+      url = "github:pythoneda-shared-pythoneda-def/infrastructure/0.0.1";
     };
   };
   outputs = inputs:
@@ -137,15 +131,15 @@
           builtins.replaceStrings [ "\n" ] [ "" ] "nixos-${nixosVersion}";
         shared = import "${pythoneda-shared-pythoneda-banner}/nix/shared.nix";
         pkgs = import nixos { inherit system; };
-        pythoneda-sandbox-python-artifact-application-for = { python
+        pythoneda-sandbox-artifact-python-application-for = { python
           , pythoneda-shared-artifact-application
           , pythoneda-shared-artifact-infrastructure
           , pythoneda-shared-artifact-shared
           , pythoneda-shared-pythoneda-application
           , pythoneda-shared-pythoneda-banner, pythoneda-shared-pythoneda-domain
           , pythoneda-shared-pythoneda-infrastructure
-          , pythoneda-sandbox-python-artifact
-          , pythoneda-sandbox-python-artifact-infrastructure }:
+          , pythoneda-sandbox-artifact-python
+          , pythoneda-sandbox-artifact-python-infrastructure }:
           let
             pnameWithUnderscores =
               builtins.replaceStrings [ "-" ] [ "_" ] pname;
@@ -167,6 +161,10 @@
               desc = description;
               inherit homepage package pname pythonMajorMinorVersion
                 pythonpackage version;
+              pythonedaSandboxArtifactPython =
+                pythoneda-sandbox-artifact-python.version;
+              pythonedaSandboxArtifactPythonInfrastructure =
+                pythoneda-sandbox-artifact-python-infrastructure.version;
               pythonedaSharedArtifactApplication =
                 pythoneda-shared-artifact-application.version;
               pythonedaSharedArtifactInfrastructure =
@@ -181,10 +179,6 @@
                 pythoneda-shared-pythoneda-domain.version;
               pythonedaSharedPythonedaInfrastructure =
                 pythoneda-shared-pythoneda-infrastructure.version;
-              pythonedaSandboxPythonArtifact =
-                pythoneda-sandbox-python-artifact.version;
-              pythonedaSandboxPythonArtifactInfrastructure =
-                pythoneda-sandbox-python-artifact-infrastructure.version;
               src = pyprojectTemplateFile;
             };
             bannerTemplateFile =
@@ -227,6 +221,8 @@
 
             nativeBuildInputs = with python.pkgs; [ pip pkgs.jq poetry-core ];
             propagatedBuildInputs = with python.pkgs; [
+              pythoneda-sandbox-artifact-python
+              pythoneda-sandbox-artifact-python-infrastructure
               pythoneda-shared-artifact-application
               pythoneda-shared-artifact-infrastructure
               pythoneda-shared-artifact-shared
@@ -234,8 +230,6 @@
               pythoneda-shared-pythoneda-banner
               pythoneda-shared-pythoneda-domain
               pythoneda-shared-pythoneda-infrastructure
-              pythoneda-sandbox-python-artifact
-              pythoneda-sandbox-python-artifact-infrastructure
             ];
 
             # pythonImportsCheck = [ pythonpackage ];
@@ -283,47 +277,47 @@
           };
       in rec {
         apps = rec {
-          default = pythoneda-sandbox-python-artifact-application-default;
-          pythoneda-sandbox-python-artifact-application-default =
-            pythoneda-sandbox-python-artifact-application-python311;
-          pythoneda-sandbox-python-artifact-application-python38 =
+          default = pythoneda-sandbox-artifact-python-application-default;
+          pythoneda-sandbox-artifact-python-application-default =
+            pythoneda-sandbox-artifact-python-application-python311;
+          pythoneda-sandbox-artifact-python-application-python38 =
             shared.app-for {
               package =
-                self.packages.${system}.pythoneda-sandbox-python-artifact-application-python38;
+                self.packages.${system}.pythoneda-sandbox-artifact-python-application-python38;
               inherit entrypoint;
             };
-          pythoneda-sandbox-python-artifact-application-python39 =
+          pythoneda-sandbox-artifact-python-application-python39 =
             shared.app-for {
               package =
-                self.packages.${system}.pythoneda-sandbox-python-artifact-application-python39;
+                self.packages.${system}.pythoneda-sandbox-artifact-python-application-python39;
               inherit entrypoint;
             };
-          pythoneda-sandbox-python-artifact-application-python310 =
+          pythoneda-sandbox-artifact-python-application-python310 =
             shared.app-for {
               package =
-                self.packages.${system}.pythoneda-sandbox-python-artifact-application-python310;
+                self.packages.${system}.pythoneda-sandbox-artifact-python-application-python310;
               inherit entrypoint;
             };
-          pythoneda-sandbox-python-artifact-application-python311 =
+          pythoneda-sandbox-artifact-python-application-python311 =
             shared.app-for {
               package =
-                self.packages.${system}.pythoneda-sandbox-python-artifact-application-python311;
+                self.packages.${system}.pythoneda-sandbox-artifact-python-application-python311;
               inherit entrypoint;
             };
         };
         defaultApp = apps.default;
         defaultPackage = packages.default;
         devShells = rec {
-          default = pythoneda-sandbox-python-artifact-application-default;
-          pythoneda-sandbox-python-artifact-application-default =
-            pythoneda-sandbox-python-artifact-application-python311;
-          pythoneda-sandbox-python-artifact-application-python38 =
+          default = pythoneda-sandbox-artifact-python-application-default;
+          pythoneda-sandbox-artifact-python-application-default =
+            pythoneda-sandbox-artifact-python-application-python311;
+          pythoneda-sandbox-artifact-python-application-python38 =
             shared.devShell-for {
               banner = "${
                   pythoneda-shared-pythoneda-banner.packages.${system}.pythoneda-shared-pythoneda-banner-python38
                 }/bin/banner.sh";
               package =
-                packages.pythoneda-sandbox-python-artifact-application-python38;
+                packages.pythoneda-sandbox-artifact-python-application-python38;
               python = pkgs.python38;
               pythoneda-shared-pythoneda-domain =
                 pythoneda-shared-pythoneda-domain.packages.${system}.pythoneda-shared-pythoneda-domain-python38;
@@ -331,13 +325,13 @@
                 pythoneda-shared-pythoneda-banner.packages.${system}.pythoneda-shared-pythoneda-banner-python38;
               inherit archRole layer nixpkgsRelease org pkgs repo space;
             };
-          pythoneda-sandbox-python-artifact-application-python39 =
+          pythoneda-sandbox-artifact-python-application-python39 =
             shared.devShell-for {
               banner = "${
                   pythoneda-shared-pythoneda-banner.packages.${system}.pythoneda-shared-pythoneda-banner-python38
                 }/bin/banner.sh";
               package =
-                packages.pythoneda-sandbox-python-artifact-application-python39;
+                packages.pythoneda-sandbox-artifact-python-application-python39;
               python = pkgs.python39;
               pythoneda-shared-pythoneda-domain =
                 pythoneda-shared-pythoneda-domain.packages.${system}.pythoneda-shared-pythoneda-domain-python39;
@@ -345,13 +339,13 @@
                 pythoneda-shared-pythoneda-banner.packages.${system}.pythoneda-shared-pythoneda-banner-python39;
               inherit archRole layer nixpkgsRelease org pkgs repo space;
             };
-          pythoneda-sandbox-python-artifact-application-python310 =
+          pythoneda-sandbox-artifact-python-application-python310 =
             shared.devShell-for {
               banner = "${
                   pythoneda-shared-pythoneda-banner.packages.${system}.pythoneda-shared-pythoneda-banner-python38
                 }/bin/banner.sh";
               package =
-                packages.pythoneda-sandbox-python-artifact-application-python310;
+                packages.pythoneda-sandbox-artifact-python-application-python310;
               python = pkgs.python310;
               pythoneda-shared-pythoneda-domain =
                 pythoneda-shared-pythoneda-domain.packages.${system}.pythoneda-shared-pythoneda-domain-python310;
@@ -359,13 +353,13 @@
                 pythoneda-shared-pythoneda-banner.packages.${system}.pythoneda-shared-pythoneda-banner-python310;
               inherit archRole layer nixpkgsRelease org pkgs repo space;
             };
-          pythoneda-sandbox-python-artifact-application-python311 =
+          pythoneda-sandbox-artifact-python-application-python311 =
             shared.devShell-for {
               banner = "${
                   pythoneda-shared-pythoneda-banner.packages.${system}.pythoneda-shared-pythoneda-banner-python38
                 }/bin/banner.sh";
               package =
-                packages.pythoneda-sandbox-python-artifact-application-python311;
+                packages.pythoneda-sandbox-artifact-python-application-python311;
               python = pkgs.python311;
               pythoneda-shared-pythoneda-domain =
                 pythoneda-shared-pythoneda-domain.packages.${system}.pythoneda-shared-pythoneda-domain-python311;
@@ -375,16 +369,16 @@
             };
         };
         packages = rec {
-          default = pythoneda-sandbox-python-artifact-application-default;
-          pythoneda-sandbox-python-artifact-application-default =
-            pythoneda-sandbox-python-artifact-application-python311;
-          pythoneda-sandbox-python-artifact-application-python38 =
-            pythoneda-sandbox-python-artifact-application-for {
+          default = pythoneda-sandbox-artifact-python-application-default;
+          pythoneda-sandbox-artifact-python-application-default =
+            pythoneda-sandbox-artifact-python-application-python311;
+          pythoneda-sandbox-artifact-python-application-python38 =
+            pythoneda-sandbox-artifact-python-application-for {
               python = pkgs.python38;
-              pythoneda-sandbox-python-artifact =
-                pythoneda-sandbox-python-artifact.packages.${system}.pythoneda-sandbox-python-artifact-python38;
-              pythoneda-sandbox-python-artifact-infrastructure =
-                pythoneda-sandbox-python-artifact-infrastructure.packages.${system}.pythoneda-sandbox-python-artifact-infrastructure-python38;
+              pythoneda-sandbox-artifact-python =
+                pythoneda-sandbox-artifact-python.packages.${system}.pythoneda-sandbox-artifact-python-python38;
+              pythoneda-sandbox-artifact-python-infrastructure =
+                pythoneda-sandbox-artifact-python-infrastructure.packages.${system}.pythoneda-sandbox-artifact-python-infrastructure-python38;
               pythoneda-shared-artifact-application =
                 pythoneda-shared-artifact-application.packages.${system}.pythoneda-shared-artifact-application-python38;
               pythoneda-shared-artifact-infrastructure =
@@ -400,13 +394,13 @@
               pythoneda-shared-pythoneda-infrastructure =
                 pythoneda-shared-pythoneda-infrastructure.packages.${system}.pythoneda-shared-pythoneda-infrastructure-python38;
             };
-          pythoneda-sandbox-python-artifact-application-python39 =
-            pythoneda-sandbox-python-artifact-application-for {
+          pythoneda-sandbox-artifact-python-application-python39 =
+            pythoneda-sandbox-artifact-python-application-for {
               python = pkgs.python39;
-              pythoneda-sandbox-python-artifact =
-                pythoneda-sandbox-python-artifact.packages.${system}.pythoneda-sandbox-python-artifact-python39;
-              pythoneda-sandbox-python-artifact-infrastructure =
-                pythoneda-sandbox-python-artifact-infrastructure.packages.${system}.pythoneda-sandbox-python-artifact-infrastructure-python39;
+              pythoneda-sandbox-artifact-python =
+                pythoneda-sandbox-artifact-python.packages.${system}.pythoneda-sandbox-artifact-python-python39;
+              pythoneda-sandbox-artifact-python-infrastructure =
+                pythoneda-sandbox-artifact-python-infrastructure.packages.${system}.pythoneda-sandbox-artifact-python-infrastructure-python39;
               pythoneda-shared-artifact-application =
                 pythoneda-shared-artifact-application.packages.${system}.pythoneda-shared-artifact-application-python39;
               pythoneda-shared-artifact-infrastructure =
@@ -422,13 +416,13 @@
               pythoneda-shared-pythoneda-infrastructure =
                 pythoneda-shared-pythoneda-infrastructure.packages.${system}.pythoneda-shared-pythoneda-infrastructure-python39;
             };
-          pythoneda-sandbox-python-artifact-application-python310 =
-            pythoneda-sandbox-python-artifact-application-for {
+          pythoneda-sandbox-artifact-python-application-python310 =
+            pythoneda-sandbox-artifact-python-application-for {
               python = pkgs.python310;
-              pythoneda-sandbox-python-artifact =
-                pythoneda-sandbox-python-artifact.packages.${system}.pythoneda-sandbox-python-artifact-python310;
-              pythoneda-sandbox-python-artifact-infrastructure =
-                pythoneda-sandbox-python-artifact-infrastructure.packages.${system}.pythoneda-sandbox-python-artifact-infrastructure-python310;
+              pythoneda-sandbox-artifact-python =
+                pythoneda-sandbox-artifact-python.packages.${system}.pythoneda-sandbox-artifact-python-python310;
+              pythoneda-sandbox-artifact-python-infrastructure =
+                pythoneda-sandbox-artifact-python-infrastructure.packages.${system}.pythoneda-sandbox-artifact-python-infrastructure-python310;
               pythoneda-shared-artifact-application =
                 pythoneda-shared-artifact-application.packages.${system}.pythoneda-shared-artifact-application-python310;
               pythoneda-shared-artifact-infrastructure =
@@ -444,13 +438,13 @@
               pythoneda-shared-pythoneda-infrastructure =
                 pythoneda-shared-pythoneda-infrastructure.packages.${system}.pythoneda-shared-pythoneda-infrastructure-python310;
             };
-          pythoneda-sandbox-python-artifact-application-python311 =
-            pythoneda-sandbox-python-artifact-application-for {
+          pythoneda-sandbox-artifact-python-application-python311 =
+            pythoneda-sandbox-artifact-python-application-for {
               python = pkgs.python311;
-              pythoneda-sandbox-python-artifact =
-                pythoneda-sandbox-python-artifact.packages.${system}.pythoneda-sandbox-python-artifact-python311;
-              pythoneda-sandbox-python-artifact-infrastructure =
-                pythoneda-sandbox-python-artifact-infrastructure.packages.${system}.pythoneda-sandbox-python-artifact-infrastructure-python311;
+              pythoneda-sandbox-artifact-python =
+                pythoneda-sandbox-artifact-python.packages.${system}.pythoneda-sandbox-artifact-python-python311;
+              pythoneda-sandbox-artifact-python-infrastructure =
+                pythoneda-sandbox-artifact-python-infrastructure.packages.${system}.pythoneda-sandbox-artifact-python-infrastructure-python311;
               pythoneda-shared-artifact-application =
                 pythoneda-shared-artifact-application.packages.${system}.pythoneda-shared-artifact-application-python311;
               pythoneda-shared-artifact-infrastructure =
