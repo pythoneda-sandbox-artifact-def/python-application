@@ -110,10 +110,10 @@
     with inputs;
     flake-utils.lib.eachDefaultSystem (system:
       let
-        org = "pythoneda-sandbox";
-        repo = "python-artifact-application";
-        version = "0.0.5";
-        sha256 = "1xyp9qyggc3wfws7klg430xn4f0nkrq9p4ys4y18rr38zclzcz6y";
+        org = "pythoneda-sandbox-artifact";
+        repo = "python-application";
+        version = "0.0.7";
+        sha256 = "09ndz87img9dii5bah387cqafsg2gi3migfk6932w8c3n59ar4kx";
         pname = "${org}-${repo}";
         pythonpackage = "pythoneda.sandbox.artifact.application";
         package = builtins.replaceStrings [ "." ] [ "/" ] pythonpackage;
