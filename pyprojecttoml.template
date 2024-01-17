@@ -32,10 +32,10 @@ pythoneda-sandbox-artifact-python-infrastructure = "^@pythonedaSandboxArtifactPy
 pythoneda-shared-artifact-application = "^@pythonedaSharedArtifactApplication@"
 pythoneda-shared-artifact-shared = "^@pythonedaSharedArtifactShared@"
 pythoneda-shared-artifact-infrastructure = "^@pythonedaSharedArtifactInfrastructure@"
-pythoneda-shared-pythoneda-application = "^@pythonedaSharedPythonedaApplication@"
-pythoneda-shared-pythoneda-banner = "^@pythonedaSharedPythonedaBanner@"
-pythoneda-shared-pythoneda-domain = "^@pythonedaSharedPythonedaDomain@"
-pythoneda-shared-pythoneda-infrastructure = "^@pythonedaSharedPythonedaInfrastructure@"
+pythoneda-shared-application = "^@pythonedaSharedApplication@"
+pythoneda-shared-banner = "^@pythonedaSharedBanner@"
+pythoneda-shared-domain = "^@pythonedaSharedDomain@"
+pythoneda-shared-infrastructure = "^@pythonedaSharedInfrastructure@"
 
 [build-system]
 requires = ["poetry-core"]
