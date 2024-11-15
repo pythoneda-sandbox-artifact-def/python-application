@@ -143,8 +143,8 @@
           in python.pkgs.buildPythonPackage rec {
             inherit pname version;
             projectDir = ./.;
-            pyprojectTemplateFile = ./pyprojecttoml.template;
-            pyprojectTemplate = pkgs.substituteAll {
+            pyprojectTomlTemplate = ./templates/pyproject.toml.template;
+            pyprojectToml = pkgs.substituteAll {
               authors = builtins.concatStringsSep ","
                 (map (item: ''"${item}"'') maintainers);
               desc = description;
@@ -166,7 +166,7 @@
                 pythoneda-shared-pythonlang-banner.version;
               pythonedaSharedPythonlangDomain =
                 pythoneda-shared-pythonlang-domain.version;
-              src = pyprojectTemplateFile;
+              src = pyprojectTomlTemplate;
             };
             bannerTemplateFile =
               "${pythoneda-shared-pythonlang-banner}/templates/banner.py.template";
@@ -222,7 +222,7 @@
               cp -r ${src} .
               sourceRoot=$(ls | grep -v env-vars)
               chmod -R +w $sourceRoot
-              cp ${pyprojectTemplate} $sourceRoot/pyproject.toml
+              cp ${pyprojectToml} $sourceRoot/pyproject.toml
               ls -l $sourceRoot/
               cp ${bannerTemplate} $sourceRoot/${banner_file}
               cp ${entrypointTemplate} $sourceRoot/entrypoint.sh
@@ -263,7 +263,7 @@
         apps = rec {
           default = pythoneda-sandbox-artifact-python-application-default;
           pythoneda-sandbox-artifact-python-application-default =
-            pythoneda-sandbox-artifact-python-application-python311;
+            pythoneda-sandbox-artifact-python-application-python312;
           pythoneda-sandbox-artifact-python-application-python38 =
             shared.app-for {
               package =
@@ -288,13 +288,19 @@
                 self.packages.${system}.pythoneda-sandbox-artifact-python-application-python311;
               inherit entrypoint;
             };
+          pythoneda-sandbox-artifact-python-application-python312 =
+            shared.app-for {
+              package =
+                self.packages.${system}.pythoneda-sandbox-artifact-python-application-python312;
+              inherit entrypoint;
+            };
         };
         defaultApp = apps.default;
         defaultPackage = packages.default;
         devShells = rec {
           default = pythoneda-sandbox-artifact-python-application-default;
           pythoneda-sandbox-artifact-python-application-default =
-            pythoneda-sandbox-artifact-python-application-python311;
+            pythoneda-sandbox-artifact-python-application-python312;
           pythoneda-sandbox-artifact-python-application-python38 =
             shared.devShell-for {
               banner = "${
@@ -359,11 +365,27 @@
                 pythoneda-shared-pythonlang-banner.packages.${system}.pythoneda-shared-pythonlang-banner-python311;
               inherit archRole layer org pkgs repo space;
             };
+          pythoneda-sandbox-artifact-python-application-python312 =
+            shared.devShell-for {
+              banner = "${
+                  pythoneda-shared-pythonlang-banner.packages.${system}.pythoneda-shared-pythonlang-banner-python312
+                }/bin/banner.sh";
+              extra-namespaces = "";
+              nixpkgs-release = nixpkgsRelease;
+              package =
+                packages.pythoneda-sandbox-artifact-python-application-python312;
+              python = pkgs.python312;
+              pythoneda-shared-pythonlang-domain =
+                pythoneda-shared-pythonlang-domain.packages.${system}.pythoneda-shared-pythonlang-domain-python312;
+              pythoneda-shared-pythonlang-banner =
+                pythoneda-shared-pythonlang-banner.packages.${system}.pythoneda-shared-pythonlang-banner-python312;
+              inherit archRole layer org pkgs repo space;
+            };
         };
         packages = rec {
           default = pythoneda-sandbox-artifact-python-application-default;
           pythoneda-sandbox-artifact-python-application-default =
-            pythoneda-sandbox-artifact-python-application-python311;
+            pythoneda-sandbox-artifact-python-application-python312;
           pythoneda-sandbox-artifact-python-application-python38 =
             pythoneda-sandbox-artifact-python-application-for {
               python = pkgs.python38;
@@ -443,6 +465,26 @@
                 pythoneda-shared-pythonlang-banner.packages.${system}.pythoneda-shared-pythonlang-banner-python311;
               pythoneda-shared-pythonlang-domain =
                 pythoneda-shared-pythonlang-domain.packages.${system}.pythoneda-shared-pythonlang-domain-python311;
+            };
+          pythoneda-sandbox-artifact-python-application-python312 =
+            pythoneda-sandbox-artifact-python-application-for {
+              python = pkgs.python312;
+              pythoneda-sandbox-artifact-python =
+                pythoneda-sandbox-artifact-python.packages.${system}.pythoneda-sandbox-artifact-python-python312;
+              pythoneda-sandbox-artifact-python-infrastructure =
+                pythoneda-sandbox-artifact-python-infrastructure.packages.${system}.pythoneda-sandbox-artifact-python-infrastructure-python312;
+              pythoneda-shared-artifact-application =
+                pythoneda-shared-artifact-application.packages.${system}.pythoneda-shared-artifact-application-python312;
+              pythoneda-shared-artifact-infrastructure =
+                pythoneda-shared-artifact-infrastructure.packages.${system}.pythoneda-shared-artifact-infrastructure-python312;
+              pythoneda-shared-artifact-shared =
+                pythoneda-shared-artifact-shared.packages.${system}.pythoneda-shared-artifact-shared-python312;
+              pythoneda-shared-pythonlang-application =
+                pythoneda-shared-pythonlang-application.packages.${system}.pythoneda-shared-pythonlang-application-python312;
+              pythoneda-shared-pythonlang-banner =
+                pythoneda-shared-pythonlang-banner.packages.${system}.pythoneda-shared-pythonlang-banner-python312;
+              pythoneda-shared-pythonlang-domain =
+                pythoneda-shared-pythonlang-domain.packages.${system}.pythoneda-shared-pythonlang-domain-python312;
             };
         };
       });
