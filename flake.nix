@@ -28,7 +28,7 @@
         "pythoneda-shared-pythonlang-banner";
       inputs.pythoneda-shared-pythonlang-domain.follows =
         "pythoneda-shared-pythonlang-domain";
-      url = "github:pythoneda-sandbox-artifact-def/python/0.0.77";
+      url = "github:pythoneda-sandbox-artifact-def/python/0.0.78";
     };
     pythoneda-sandbox-artifact-python-infrastructure = {
       inputs.flake-utils.follows = "flake-utils";
@@ -40,7 +40,7 @@
       inputs.pythoneda-sandbox-artifact-python.follows =
         "pythoneda-sandbox-artifact-python";
       url =
-        "github:pythoneda-sandbox-artifact-def/python-infrastructure/0.0.81";
+        "github:pythoneda-sandbox-artifact-def/python-infrastructure/0.0.82";
     };
     pythoneda-shared-artifact-application = {
       inputs.flake-utils.follows = "flake-utils";
@@ -53,7 +53,7 @@
         "pythoneda-shared-pythonlang-banner";
       inputs.pythoneda-shared-pythonlang-domain.follows =
         "pythoneda-shared-pythonlang-domain";
-      url = "github:pythoneda-shared-artifact-def/application/0.0.88";
+      url = "github:pythoneda-shared-artifact-def/application/0.0.89";
     };
     pythoneda-shared-artifact-infrastructure = {
       inputs.flake-utils.follows = "flake-utils";
@@ -62,7 +62,7 @@
         "pythoneda-shared-pythonlang-banner";
       inputs.pythoneda-shared-pythonlang-domain.follows =
         "pythoneda-shared-pythonlang-domain";
-      url = "github:pythoneda-shared-artifact-def/infrastructure/0.0.85";
+      url = "github:pythoneda-shared-artifact-def/infrastructure/0.0.86";
     };
     pythoneda-shared-artifact-shared = {
       inputs.flake-utils.follows = "flake-utils";
@@ -71,7 +71,7 @@
         "pythoneda-shared-pythonlang-banner";
       inputs.pythoneda-shared-pythonlang-domain.follows =
         "pythoneda-shared-pythonlang-domain";
-      url = "github:pythoneda-shared-artifact-def/shared/0.0.94";
+      url = "github:pythoneda-shared-artifact-def/shared/0.0.95";
     };
     pythoneda-shared-pythonlang-application = {
       inputs.flake-utils.follows = "flake-utils";
@@ -80,19 +80,19 @@
         "pythoneda-shared-pythonlang-banner";
       inputs.pythoneda-shared-pythonlang-domain.follows =
         "pythoneda-shared-pythonlang-domain";
-      url = "github:pythoneda-shared-pythonlang-def/application/0.0.107";
+      url = "github:pythoneda-shared-pythonlang-def/application/0.0.108";
     };
     pythoneda-shared-pythonlang-banner = {
       inputs.flake-utils.follows = "flake-utils";
       inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:pythoneda-shared-pythonlang-def/banner/0.0.74";
+      url = "github:pythoneda-shared-pythonlang-def/banner/0.0.78";
     };
     pythoneda-shared-pythonlang-domain = {
       inputs.flake-utils.follows = "flake-utils";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.pythoneda-shared-pythonlang-banner.follows =
         "pythoneda-shared-pythonlang-banner";
-      url = "github:pythoneda-shared-pythonlang-def/domain/0.0.110";
+      url = "github:pythoneda-shared-pythonlang-def/domain/0.0.112";
     };
   };
   outputs = inputs:
@@ -219,13 +219,12 @@
             # pythonImportsCheck = [ pythonpackage ];
 
             unpackPhase = ''
-              cp -r ${src} .
-              sourceRoot=$(ls | grep -v env-vars)
-              chmod -R +w $sourceRoot
-              cp ${pyprojectToml} $sourceRoot/pyproject.toml
-              ls -l $sourceRoot/
-              cp ${bannerTemplate} $sourceRoot/${banner_file}
-              cp ${entrypointTemplate} $sourceRoot/entrypoint.sh
+              command cp -r ${src} .
+              sourceRoot=$(command ls | grep -v env-vars)
+              command chmod -R +w $sourceRoot
+              command cp ${pyprojectToml} $sourceRoot/pyproject.toml
+              command cp ${bannerTemplate} $sourceRoot/${banner_file}
+              command cp ${entrypointTemplate} $sourceRoot/entrypoint.sh
             '';
 
             postPatch = ''
@@ -237,22 +236,32 @@
                 --replace "@BANNER@" "$out/bin/banner.sh"
             '';
 
-            postInstall = ''
-              pushd /build/$sourceRoot
-              for f in $(find . -name '__init__.py'); do
+            postInstall = with python.pkgs; ''
+              command pushd /build/$sourceRoot
+              for f in $(command find . -name '__init__.py'); do
                 if [[ ! -e $out/lib/python${pythonMajorMinorVersion}/site-packages/$f ]]; then
-                  cp $f $out/lib/python${pythonMajorMinorVersion}/site-packages/$f;
+                  command cp $f $out/lib/python${pythonMajorMinorVersion}/site-packages/$f;
                 fi
               done
-              popd
-              mkdir $out/dist $out/bin
-              cp dist/${wheelName} $out/dist
-              cp /build/$sourceRoot/entrypoint.sh $out/bin/${entrypoint}.sh
-              chmod +x $out/bin/${entrypoint}.sh
-              echo '#!/usr/bin/env sh' > $out/bin/banner.sh
-              echo "export PYTHONPATH=$PYTHONPATH" >> $out/bin/banner.sh
-              echo "${python}/bin/python $out/lib/python${pythonMajorMinorVersion}/site-packages/${banner_file} \$@" >> $out/bin/banner.sh
-              chmod +x $out/bin/banner.sh
+              command popd
+              command mkdir -p $out/dist $out/bin $out/deps/flakes $out/deps/nixpkgs
+              command cp dist/${wheelName} $out/dist
+              command cp /build/$sourceRoot/entrypoint.sh $out/bin/${entrypoint}.sh
+              command chmod +x $out/bin/${entrypoint}.sh
+              command echo '#!/usr/bin/env sh' > $out/bin/banner.sh
+              command echo "export PYTHONPATH=$PYTHONPATH" >> $out/bin/banner.sh
+              command echo "${python}/bin/python $out/lib/python${pythonMajorMinorVersion}/site-packages/${banner_file} \$@" >> $out/bin/banner.sh
+              command chmod +x $out/bin/banner.sh
+              for dep in ${pythoneda-sandbox-artifact-python} ${pythoneda-sandbox-artifact-python-infrastructure} ${pythoneda-shared-artifact-application} ${pythoneda-shared-artifact-infrastructure} ${pythoneda-shared-artifact-shared} ${pythoneda-shared-pythonlang-application} ${pythoneda-shared-pythonlang-banner} ${pythoneda-shared-pythonlang-domain}; do
+                command cp -r $dep/dist/* $out/deps || true
+                if [ -e $dep/deps ]; then
+                  command cp -r $dep/deps/* $out/deps || true
+                fi
+                METADATA=$dep/lib/python${pythonMajorMinorVersion}/site-packages/*.dist-info/METADATA
+                NAME="$(command grep -m 1 '^Name: ' $METADATA | command cut -d ' ' -f 2)"
+                VERSION="$(command grep -m 1 '^Version: ' $METADATA | command cut -d ' ' -f 2)"
+                command ln -s $dep $out/deps/flakes/$NAME-$VERSION || true
+              done
             '';
 
             meta = with pkgs.lib; {
